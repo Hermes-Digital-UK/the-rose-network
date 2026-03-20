@@ -22,6 +22,7 @@ The official website of The ROSE Network — the Intelligence Corps Association'
 | `/privacy-policy` | Privacy policy |
 | `/cookie-policy` | Cookie policy |
 | `/terms-of-use` | Terms of use |
+| `/insights` | Insights articles hub |
 | `/404` | Custom 404 page |
 
 ## Tech Stack
@@ -29,10 +30,11 @@ The official website of The ROSE Network — the Intelligence Corps Association'
 - **Type:** Static HTML/CSS/JS (no framework)
 - **Hosting:** Vercel (clean URLs enabled via `vercel.json`)
 - **Styling:** Single stylesheet (`css/style.css`) with CSS custom properties
-- **Fonts:** Spectral (headings) + Figtree (body) via Google Fonts
+- **Fonts:** Spectral (headings) + Figtree (body) via Google Fonts `<link>`
 - **Forms:** HubSpot embedded forms (EU region)
 - **Analytics:** Google Tag Manager with Consent Mode v2
 - **Cookie consent:** Custom banner with localStorage persistence
+- **SEO:** Open Graph/Twitter meta tags, canonical URLs, JSON-LD structured data, `robots.txt`, `sitemap.xml`
 
 ## Project Structure
 
@@ -42,6 +44,7 @@ The official website of The ROSE Network — the Intelligence Corps Association'
 ├── professional-network.html   # Network pillar
 ├── enterprise.html             # Enterprise pillar
 ├── events.html                 # Events (Rose RV + Forums)
+├── insights.html               # Insights articles hub
 ├── about.html                  # Chairman profile
 ├── contact.html                # Contact page
 ├── brand-guidelines.html       # Brand & component reference
@@ -52,7 +55,7 @@ The official website of The ROSE Network — the Intelligence Corps Association'
 ├── terms-of-use.html
 ├── 404.html                    # Custom 404
 ├── css/
-│   └── style.css               # All styles
+│   └── style.css               # All styles (responsive: 900/720/600/480px)
 ├── assets/
 │   ├── rose-network-logo-horizontal.png
 │   ├── rose-network-logo-portrait.png
@@ -61,9 +64,22 @@ The official website of The ROSE Network — the Intelligence Corps Association'
 │   └── favicon.ico
 ├── output/
 │   └── email-signature.html    # HTML email signature template
+├── robots.txt                  # Search engine directives
+├── sitemap.xml                 # XML sitemap
 ├── vercel.json                 # Vercel config (clean URLs)
 └── CLAUDE.md                   # Project context for AI assistants
 ```
+
+## Responsive Design
+
+Fully responsive across four breakpoints:
+
+| Breakpoint | Target |
+|---|---|
+| `900px` | Tablet — grids collapse to 2-col or 1-col, hero scales down |
+| `720px` | Large mobile — hamburger nav, single-column layouts, stacked footer |
+| `600px` | Small mobile — cookie banner stacks, legal tables scroll horizontally |
+| `480px` | Small phones — tighter padding, full-width buttons, scaled typography |
 
 ## Design
 
