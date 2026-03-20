@@ -1407,6 +1407,212 @@ h2 {
   }
 }
 
+/* --- About / Chairman Profile --- */
+.about-profile {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: var(--space-lg);
+  align-items: start;
+}
+
+.about-portrait-img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.about-intro h2 {
+  font-size: 2.4rem;
+  margin-bottom: 0.25rem;
+}
+
+.about-intro h2::after {
+  display: none;
+}
+
+.about-credentials {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  letter-spacing: 0.03em;
+  margin-bottom: 0.15rem;
+}
+
+.about-intro .about-role {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.05rem;
+  color: var(--color-accent);
+  margin-bottom: var(--space-sm);
+}
+
+.about-content {
+  max-width: 780px;
+}
+
+.about-content h2::after {
+  display: none;
+}
+
+.about-content h2 {
+  margin-bottom: var(--space-sm);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.about-content p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: var(--space-sm);
+}
+
+.about-roles-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+.about-role-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.about-role-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-ica-red), var(--color-accent));
+}
+
+.about-role-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.about-role-card h3 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 1.15rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 0.15rem;
+}
+
+.about-role-card .about-role-title {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+  margin-bottom: var(--space-xs);
+}
+
+.about-role-card p {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.about-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+  max-width: none;
+}
+
+.about-two-col h2 {
+  font-size: 1.45rem;
+}
+
+.about-list {
+  list-style: none;
+  padding: 0;
+}
+
+.about-list li {
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  padding: 0.4rem 0;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.about-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.85rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+}
+
+.about-personal {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.about-personal h2 {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.about-personal p {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  line-height: 1.85;
+}
+
+@media (max-width: 900px) {
+  .about-profile {
+    grid-template-columns: 200px 1fr;
+    gap: var(--space-md);
+  }
+
+  .about-roles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-two-col {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+}
+
+@media (max-width: 720px) {
+  .about-profile {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-portrait {
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
+  .about-intro h2 {
+    font-size: 2rem;
+  }
+}
+
 /* --- Legal Pages --- */
 .hero--compact {
   padding: 3.5rem 0 2.5rem;
