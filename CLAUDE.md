@@ -74,6 +74,13 @@ Mrs Hazel Donald — Headquarters Intelligence Corps Association
 - `assets/favicon.ico`
 - `output/email-signature.html` — HTML email signature template
 
+## Key Relationships
+- **British Veteran Owned (BVO):** Independent organisation, NOT part of The ROSE Network. They collaborate because the Chairman (Stephen James) chairs both. No money changes hands — efficient use of shared resources. Always frame as "in collaboration with", never "through" or "owned by". Link: https://www.britishveteranowned.co.uk/
+
+## Deployment
+- `vercel.json` enables `cleanUrls` (`.html` extensions stripped)
+- Pushes to `main` auto-deploy to Vercel
+
 ## Constraints
 - No client/member data in personal or shared environments
 - Member data (especially Service Leavers, Networkers) is highly sensitive
