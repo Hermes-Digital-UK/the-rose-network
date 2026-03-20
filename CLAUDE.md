@@ -54,6 +54,7 @@ Mrs Hazel Donald — Headquarters Intelligence Corps Association
 - `/about` — Chairman profile (Stephen James)
 - `/contact` — Contact form (HubSpot) + info sidebar
 - `/about/constitution` — Network constitution
+- `/brand-guidelines` — Visual identity and component reference (noindex, team resource)
 - `/404` — Custom 404 page (Sandhurst background, DE officer joke)
 - `/privacy-policy`, `/cookie-policy`, `/terms-of-use` — Legal pages
 

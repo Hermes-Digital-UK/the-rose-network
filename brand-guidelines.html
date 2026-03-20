@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brand Guidelines — The ROSE Network</title>
+  <meta name="description" content="Brand guidelines, colour palette, typography, and component reference for The ROSE Network website.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* Brand Guidelines — page-specific styles */
+    .bg-section { padding: var(--space-xl) 0; }
+    .bg-section:nth-child(even) { background-color: var(--color-highlight); }
+
+    .bg-section-title {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: var(--color-primary-dark);
+      margin-bottom: 0.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .bg-section-title::after { display: none; }
+
+    .bg-section-intro {
+      font-size: 0.95rem;
+      color: var(--color-text-muted);
+      max-width: 680px;
+      margin-bottom: var(--space-md);
+      line-height: 1.8;
+    }
+
+    .bg-subsection {
+      margin-top: var(--space-lg);
+    }
+
+    .bg-subsection-title {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: var(--space-sm);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-size: 0.78rem;
+    }
+
+    /* Colour swatches */
+    .bg-swatches {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: var(--space-sm);
+    }
+
+    .bg-swatch {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border-light);
+    }
+
+    .bg-swatch-colour {
+      height: 100px;
+      display: flex;
+      align-items: flex-end;
+      padding: 0.5rem 0.75rem;
+    }
+
+    .bg-swatch-colour span {
+      font-size: 0.72rem;
+      font-weight: 600;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      letter-spacing: 0.02em;
+      padding: 0.2rem 0.5rem;
+      border-radius: 3px;
+      background: rgba(255,255,255,0.85);
+      color: var(--color-text);
+    }
+
+    .bg-swatch-colour--dark span {
+      background: rgba(0,0,0,0.4);
+      color: #fff;
+    }
+
+    .bg-swatch-info {
+      padding: 0.75rem;
+    }
+
+    .bg-swatch-name {
+      font-weight: 600;
+      font-size: 0.88rem;
+      color: var(--color-text);
+      margin-bottom: 0.15rem;
+    }
+
+    .bg-swatch-var {
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+      font-family: 'SF Mono', 'Fira Code', monospace;
+    }
+
+    /* Typography specimens */
+    .bg-type-specimen {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-lg);
+      padding: var(--space-md);
+      margin-bottom: var(--space-sm);
+    }
+
+    .bg-type-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-accent);
+      margin-bottom: var(--space-xs);
+    }
+
+    .bg-type-meta {
+      font-size: 0.78rem;
+      color: var(--color-text-muted);
+      margin-top: 0.5rem;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+    }
+
+    /* Component showcase */
+    .bg-component-row {
+      display: flex;
+      gap: var(--space-sm);
+      flex-wrap: wrap;
+      align-items: flex-start;
+      margin-bottom: var(--space-md);
+    }
+
+    .bg-component-box {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-lg);
+      padding: var(--space-md);
+      flex: 1 1 300px;
+    }
+
+    .bg-component-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-accent);
+      margin-bottom: var(--space-sm);
+      display: block;
+    }
+
+    /* Logo display */
+    .bg-logos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--space-md);
+    }
+
+    .bg-logo-card {
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg) var(--space-md);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-sm);
+      border: 1px solid var(--color-border-light);
+    }
+
+    .bg-logo-card img { max-height: 80px; width: auto; }
+
+    .bg-logo-card--dark {
+      background: var(--color-primary-dark);
+      border-color: transparent;
+    }
+
+    .bg-logo-card--light {
+      background: var(--color-surface);
+    }
+
+    .bg-logo-label {
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+    }
+
+    .bg-logo-card--dark .bg-logo-label {
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* Spacing tokens */
+    .bg-spacing-row {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      margin-bottom: 0.75rem;
+    }
+
+    .bg-spacing-bar {
+      height: 12px;
+      background: linear-gradient(90deg, var(--color-ica-red), var(--color-accent));
+      border-radius: 2px;
+    }
+
+    .bg-spacing-label {
+      font-size: 0.78rem;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      color: var(--color-text-muted);
+      white-space: nowrap;
+      min-width: 200px;
+    }
+
+    /* Shadow display */
+    .bg-shadow-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-md);
+    }
+
+    .bg-shadow-card {
+      background: var(--color-surface);
+      border-radius: var(--radius-lg);
+      padding: var(--space-md);
+      text-align: center;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .bg-shadow-card span {
+      font-size: 0.78rem;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      color: var(--color-text-muted);
+    }
+
+    /* Grid demo */
+    .bg-grid-demo {
+      display: grid;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-sm);
+    }
+
+    .bg-grid-cell {
+      background: var(--color-accent-light);
+      border: 1px dashed var(--color-accent);
+      border-radius: var(--radius);
+      padding: var(--space-sm);
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--color-text-muted);
+    }
+
+    .bg-code {
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 0.82rem;
+      background: var(--color-highlight);
+      padding: 0.15em 0.5em;
+      border-radius: 3px;
+      color: var(--color-primary);
+    }
+
+    @media (max-width: 720px) {
+      .bg-swatches { grid-template-columns: repeat(2, 1fr); }
+      .bg-shadow-grid { grid-template-columns: 1fr; }
+      .bg-component-row { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ICA Affiliation Bar -->
+  <div class="ica-bar">
+    <div class="container">
+      <span class="ica-bar-label">Part of the <a href="https://www.roseandlaurel.uk/">Intelligence Corps Association</a></span>
+      <div class="ica-bar-links">
+        <a href="https://www.roseandlaurel.uk/">ICA Main Site</a>
+        <a href="https://www.roseandlaurel.uk/Members/Apply-for-Membership">ICA Membership</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Navigation -->
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="site-logo">
+        <img src="assets/rose-network-logo-horizontal.png" alt="The ROSE Network — Intelligence Corps Association" class="site-logo-img">
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/transition">Transition</a></li>
+          <li><a href="/professional-network">Network</a></li>
+          <li><a href="/enterprise">Enterprise</a></li>
+          <li><a href="/events">Events</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero hero--compact">
+    <div class="container">
+      <h1>Brand Guidelines</h1>
+      <p class="hero-subtitle">The ROSE Network visual identity and component reference.</p>
+    </div>
+  </section>
+
+
+  <!-- 1. Logos -->
+  <section class="bg-section">
+    <div class="container">
+      <h2 class="bg-section-title">Logos</h2>
+      <p class="bg-section-intro">The ROSE Network logo exists in two formats. Use the horizontal version in headers and horizontal layouts. Use the portrait version in footers and compact spaces. Always maintain clear space around the logo.</p>
+
+      <div class="bg-logos">
+        <div class="bg-logo-card bg-logo-card--light">
+          <img src="assets/rose-network-logo-horizontal.png" alt="Horizontal logo on light">
+          <span class="bg-logo-label">Horizontal — light background</span>
+        </div>
+        <div class="bg-logo-card bg-logo-card--dark">
+          <img src="assets/rose-network-logo-horizontal.png" alt="Horizontal logo on dark">
+          <span class="bg-logo-label">Horizontal — dark background</span>
+        </div>
+        <div class="bg-logo-card bg-logo-card--light">
+          <img src="assets/rose-network-logo-portrait.png" alt="Portrait logo on light" style="max-height: 100px;">
+          <span class="bg-logo-label">Portrait — light background</span>
+        </div>
+        <div class="bg-logo-card bg-logo-card--dark">
+          <img src="assets/rose-network-logo-portrait.png" alt="Portrait logo on dark" style="max-height: 100px;">
+          <span class="bg-logo-label">Portrait — dark background</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 2. Colour Palette -->
+  <section class="bg-section">
+    <div class="container">
+      <h2 class="bg-section-title">Colour Palette</h2>
+      <p class="bg-section-intro">The palette is built around four signature colours — teal, gold, sage, and ICA red — supported by neutral tones that convey institutional authority with warmth.</p>
+
+      <div class="bg-subsection">
+        <p class="bg-subsection-title">Primary Colours</p>
+        <div class="bg-swatches">
+          <div class="bg-swatch">
+            <div class="bg-swatch-colour bg-swatch-colour--dark" style="background-color: #1A3A4A;"><span>#1A3A4A</span></div>
+            <div class="bg-swatch-info">
+              <p class="bg-swatch-name">Primary (Teal)</p>
+              <p class="bg-swatch-var">--color-primary</p>
+            </div>
+          </div>
+          <div class="bg-swatch">
+            <div class="bg-swatch-colour bg-swatch-colour--dark" style="background-color: #0C1F2C;"><span>#0C1F2C</span></div>
+            <div class="bg-swatch-info">
+              <p class="bg-swatch-name">Primary Dark</p>
+              <p class="bg-swatch-var">--color-primary-dark</p>
+            </div>
+          </div>
+          <div class="bg-swatch">
+            <div class="bg-swatch-colour bg-swatch-colour--dark" style="background-color: #061219;"><span>#061219</span></div>
+            <div class="bg-swatch-info">
+              <p class="bg-swatch-name">Primary Deeper</p>
+              <p class="bg-swatch-var">--color-primary-deeper</p>
+            </div>
+          </div>
+          <div class="bg-swatch">
+            <div class="bg-swatch-colour" style="background-color: #C4975C;"><span>#C4975C</span></div>
+            <div class="bg-swatch-info">
+              <p class="bg-swatch-name">Accent (Gold)</p>
+              <p class="bg-swatch-var">--color-accent</p>
+            </div>
+          </div>
+          <div class="bg-swatch">
+            <div class="bg-swatch-colour bg-swatch-colour--dark" style="background-color: #3D6B56;"><span>#3D6B56</span></div>
+            <div class="bg-swatch-info">
+              <p class="bg-swatch-name">Sage (Green)</p>
+              <p class="bg-swatch-var">--color-sage</p>
+            </div>
+          </div>
+          <div class="bg-swatch">
+            <div class="bg-swatch-colour bg-swatch-colour--dark" style="background-color: #B82E35;"><span>#B82E35</span></div>
+            <div class="bg-swatch-info">
+              <p class="bg-swatch-name">ICA Red</p>
+              <p class="bg-swatch-var">--color-ica-red</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-subsection">
+        <p class="bg-subsection-title">Neutrals & Backgrounds</p>
+        <div class="bg-swatches">
+          <div class="bg-swatch">
+            <div class="bg-swatch-colour" style="background-color: #F7F5F0; border-bottom: 1px solid #EAE7E0;"><span>#F7F5F0</span></div>
+            <div class="bg-swatch-info">
+              <p class="bg-swatch-name">Background</p>
+              <p class="bg-swatch-var">--color-bg</p>
+            </div>
+          </div>
+          <div class="bg-swatch">
+            <div class="bg-swatch-colour" style="background-color: #ffffff; border-bottom: 1px solid #EAE7E0;"><span>#FFFFFF</span></div>
+            <div class="bg-swatch-info">
+              <p class="bg-swatch-name">Surface (White)</p>
+              <p class="bg-swatch-var">--color-surface</p>
+            </div>
+          </div>
+          <div class="bg-swatch">
+            <div class="bg-swatch-colour" style="background-color: #F0EDE6; border-bottom: 1px solid #DDD9D0;"><span>#F0EDE6</span></div>
+            <div class="bg-swatch-info">
+              <p class="bg-swatch-name">Highlight</p>
+              <p class="bg-swatch-var">--color-highlight</p>
+            </div>
+          </div>
+          <div class="bg-swatch">
+            <div class="bg-swatch-colour bg-swatch-colour--dark" style="background-color: #1C1C1C;"><span>#1C1C1C</span></div>
+            <div class="bg-swatch-info">
+              <p class="bg-swatch-name">Text</p>
+              <p class="bg-swatch-var">--color-text</p>
+            </div>
+          </div>
+          <div class="bg-swatch">
+            <div class="bg-swatch-colour bg-swatch-colour--dark" style="background-color: #5A5A5A;"><span>#5A5A5A</span></div>
+            <div class="bg-swatch-info">
+              <p class="bg-swatch-name">Text Muted</p>
+              <p class="bg-swatch-var">--color-text-muted</p>
+            </div>
+          </div>
+          <div class="bg-swatch">
+            <div class="bg-swatch-colour" style="background-color: #DDD9D0;"><span>#DDD9D0</span></div>
+            <div class="bg-swatch-info">
+              <p class="bg-swatch-name">Border</p>
+              <p class="bg-swatch-var">--color-border</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 3. Typography -->
+  <section class="bg-section">
+    <div class="container">
+      <h2 class="bg-section-title">Typography</h2>
+      <p class="bg-section-intro">Two typefaces create the editorial tone: Spectral for headings (authority, tradition) and Figtree for body text (clarity, accessibility).</p>
+
+      <div class="bg-type-specimen">
+        <p class="bg-type-label">Heading — Spectral</p>
+        <h1 style="font-size: 3.25rem; margin-bottom: 0.5rem;">The ROSE Network</h1>
+        <p class="bg-type-meta">font-family: 'Spectral', Georgia, serif &middot; font-weight: 400 &middot; 3.25rem</p>
+      </div>
+
+      <div class="bg-type-specimen">
+        <p class="bg-type-label">H2 — Section Heading</p>
+        <h2 style="margin-bottom: 0.5rem;">Supporting the Corps Family</h2>
+        <p class="bg-type-meta">font-family: 'Spectral' &middot; font-weight: 400 &middot; 2.1rem</p>
+      </div>
+
+      <div class="bg-type-specimen">
+        <p class="bg-type-label">H3 — Card / Subsection Heading</p>
+        <h3 style="margin-bottom: 0.5rem;">Employment Opportunities</h3>
+        <p class="bg-type-meta">font-family: 'Figtree', sans-serif &middot; font-weight: 600 &middot; 1.15rem</p>
+      </div>
+
+      <div class="bg-type-specimen">
+        <p class="bg-type-label">Hero Subtitle — Spectral Italic</p>
+        <p class="hero-subtitle" style="animation: none; position: static; text-align: left; color: var(--color-accent);">Intelligence. Community. Opportunity.</p>
+        <p class="bg-type-meta">font-family: 'Spectral' &middot; font-style: italic &middot; font-weight: 300 &middot; 1.25rem</p>
+      </div>
+
+      <div class="bg-type-specimen">
+        <p class="bg-type-label">Body Text — Figtree</p>
+        <p style="font-size: 1rem; line-height: 1.7; color: var(--color-text); max-width: 600px;">The ROSE Network connects serving personnel, veterans, and their families with trusted professional opportunities and mentoring across the Intelligence Corps community.</p>
+        <p class="bg-type-meta">font-family: 'Figtree', sans-serif &middot; font-weight: 400 &middot; 1rem &middot; line-height: 1.7</p>
+      </div>
+
+      <div class="bg-type-specimen">
+        <p class="bg-type-label">Section Lead</p>
+        <p class="section-lead" style="margin-bottom: 0;">Built for those who have served, those who are serving, and those who support them.</p>
+        <p class="bg-type-meta">font-size: 1.1rem &middot; color: --color-text-muted &middot; max-width: 680px &middot; line-height: 1.8</p>
+      </div>
+
+      <div class="bg-type-specimen">
+        <p class="bg-type-label">Label / Uppercase</p>
+        <span class="pillar-label pillar-label--transition">Transition</span>
+        <span class="pillar-label pillar-label--network" style="margin-left: 0.5rem;">Network</span>
+        <span class="pillar-label pillar-label--enterprise" style="margin-left: 0.5rem;">Enterprise</span>
+        <p class="bg-type-meta">font-size: 0.68rem &middot; font-weight: 700 &middot; text-transform: uppercase &middot; letter-spacing: 0.1em</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 4. Buttons -->
+  <section class="bg-section">
+    <div class="container">
+      <h2 class="bg-section-title">Buttons</h2>
+      <p class="bg-section-intro">Two button styles provide clear visual hierarchy. Primary buttons drive action; secondary buttons offer alternatives.</p>
+
+      <div class="bg-component-row">
+        <div class="bg-component-box">
+          <span class="bg-component-label">Standard Buttons</span>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+            <a href="#" class="btn btn-primary" onclick="return false;">Primary Button</a>
+            <a href="#" class="btn btn-secondary" onclick="return false;">Secondary Button</a>
+          </div>
+          <p class="bg-type-meta" style="margin-top: 1rem;">Classes: <span class="bg-code">.btn .btn-primary</span> &middot; <span class="bg-code">.btn .btn-secondary</span></p>
+        </div>
+        <div class="bg-component-box" style="background: var(--color-primary-dark);">
+          <span class="bg-component-label">Hero / Dark Background Variants</span>
+          <div class="hero" style="padding: 0; background: transparent; position: static; overflow: visible;">
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+              <a href="#" class="btn btn-primary" onclick="return false;">Primary (Gold)</a>
+              <a href="#" class="btn btn-secondary" onclick="return false;">Secondary (Outline)</a>
+            </div>
+          </div>
+          <p class="bg-type-meta" style="margin-top: 1rem; color: rgba(255,255,255,0.5);">Inside <span class="bg-code" style="background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.8);">.hero</span> parent, colours swap automatically</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 5. Cards -->
+  <section class="bg-section">
+    <div class="container">
+      <h2 class="bg-section-title">Cards</h2>
+      <p class="bg-section-intro">Cards are the primary content container. Each variant serves a different purpose but shares a consistent border, radius, and hover pattern.</p>
+
+      <div class="bg-subsection">
+        <p class="bg-subsection-title">Pillar Cards</p>
+        <div class="pillar-grid" style="max-width: 900px;">
+          <div class="pillar-card">
+            <span class="pillar-label pillar-label--transition">Transition</span>
+            <h3>Career Transition</h3>
+            <p>Structured support for Service Leavers navigating the move to civilian employment.</p>
+          </div>
+          <div class="pillar-card">
+            <span class="pillar-label pillar-label--network">Network</span>
+            <h3>Professional Network</h3>
+            <p>Connecting the Corps family with trusted contacts across industries.</p>
+          </div>
+          <div class="pillar-card">
+            <span class="pillar-label pillar-label--enterprise">Enterprise</span>
+            <h3>Enterprise</h3>
+            <p>Opening commercial pathways and organisational partnerships.</p>
+          </div>
+        </div>
+        <p class="bg-type-meta">Classes: <span class="bg-code">.pillar-grid</span> &middot; <span class="bg-code">.pillar-card</span> &middot; <span class="bg-code">.pillar-label--transition / --network / --enterprise</span></p>
+      </div>
+
+      <div class="bg-subsection">
+        <p class="bg-subsection-title">Principle Cards (Icon Cards)</p>
+        <div class="principles-grid" style="max-width: 900px;">
+          <div class="principle-card">
+            <div class="principle-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 8c-4 0-8 3-8 8s4 8 8 8 8-3 8-8-4-8-8-8z" stroke="currentColor" stroke-width="2"/><path d="M12 38c0-6 5-10 12-10s12 4 12 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Mentoring</h3>
+            <p>One-to-one guidance from experienced professionals.</p>
+          </div>
+          <div class="principle-card">
+            <div class="principle-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="12" width="32" height="24" rx="3" stroke="currentColor" stroke-width="2"/><path d="M8 20h32" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <h3>Opportunities</h3>
+            <p>Employment passed through the civilian network.</p>
+          </div>
+          <div class="principle-card">
+            <div class="principle-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 6v36M6 24h36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <h3>Connection</h3>
+            <p>A network that compounds with every new member.</p>
+          </div>
+        </div>
+        <p class="bg-type-meta">Classes: <span class="bg-code">.principles-grid</span> &middot; <span class="bg-code">.principle-card</span> &middot; <span class="bg-code">.principle-icon</span></p>
+      </div>
+
+      <div class="bg-subsection">
+        <p class="bg-subsection-title">Pathway Cards (Top Accent)</p>
+        <div class="pathway-grid" style="max-width: 900px;">
+          <div class="pathway-card">
+            <h3>Service Leavers</h3>
+            <p>Register for transition support and career guidance.</p>
+          </div>
+          <div class="pathway-card">
+            <h3>Networkers</h3>
+            <p>Contribute your expertise and industry connections.</p>
+          </div>
+          <div class="pathway-card">
+            <h3>Employers</h3>
+            <p>Access a trusted pipeline of intelligence-trained professionals.</p>
+          </div>
+        </div>
+        <p class="bg-type-meta">Classes: <span class="bg-code">.pathway-grid</span> &middot; <span class="bg-code">.pathway-card</span></p>
+      </div>
+
+      <div class="bg-subsection">
+        <p class="bg-subsection-title">Step Cards (Numbered)</p>
+        <div class="steps-grid" style="max-width: 900px;">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3>Register</h3>
+            <p>Complete the initial contact form.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3>Connect</h3>
+            <p>Matched with a relevant Networker.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3>Transition</h3>
+            <p>Receive guidance and introductions.</p>
+          </div>
+        </div>
+        <p class="bg-type-meta">Classes: <span class="bg-code">.steps-grid</span> &middot; <span class="bg-code">.step-card</span> &middot; <span class="bg-code">.step-number</span></p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 6. Sector Tags -->
+  <section class="bg-section">
+    <div class="container">
+      <h2 class="bg-section-title">Tags & Labels</h2>
+      <p class="bg-section-intro">Pill-shaped tags for categorisation. Hover to see the interactive state.</p>
+
+      <div class="sectors-grid" style="max-width: 700px;">
+        <span class="sector-tag">Defence & Security</span>
+        <span class="sector-tag">Consulting</span>
+        <span class="sector-tag">Finance</span>
+        <span class="sector-tag">Technology</span>
+        <span class="sector-tag">Government</span>
+        <span class="sector-tag">Education</span>
+        <span class="sector-tag">Law Enforcement</span>
+      </div>
+      <p class="bg-type-meta" style="margin-top: 1rem;">Classes: <span class="bg-code">.sectors-grid</span> &middot; <span class="bg-code">.sector-tag</span></p>
+    </div>
+  </section>
+
+
+  <!-- 7. Spacing & Layout -->
+  <section class="bg-section">
+    <div class="container">
+      <h2 class="bg-section-title">Spacing Tokens</h2>
+      <p class="bg-section-intro">Consistent spacing creates rhythm across the site. All spacing uses CSS custom properties.</p>
+
+      <div style="max-width: 600px;">
+        <div class="bg-spacing-row">
+          <span class="bg-spacing-label">--space-xs &middot; 0.5rem (8px)</span>
+          <div class="bg-spacing-bar" style="width: 8px;"></div>
+        </div>
+        <div class="bg-spacing-row">
+          <span class="bg-spacing-label">--space-sm &middot; 1rem (16px)</span>
+          <div class="bg-spacing-bar" style="width: 16px;"></div>
+        </div>
+        <div class="bg-spacing-row">
+          <span class="bg-spacing-label">--space-md &middot; 2rem (32px)</span>
+          <div class="bg-spacing-bar" style="width: 32px;"></div>
+        </div>
+        <div class="bg-spacing-row">
+          <span class="bg-spacing-label">--space-lg &middot; 3.5rem (56px)</span>
+          <div class="bg-spacing-bar" style="width: 56px;"></div>
+        </div>
+        <div class="bg-spacing-row">
+          <span class="bg-spacing-label">--space-xl &middot; 5.5rem (88px)</span>
+          <div class="bg-spacing-bar" style="width: 88px;"></div>
+        </div>
+      </div>
+
+      <div class="bg-subsection">
+        <p class="bg-subsection-title">Shadows</p>
+        <div class="bg-shadow-grid" style="max-width: 700px;">
+          <div class="bg-shadow-card" style="box-shadow: var(--shadow-sm);"><span>--shadow-sm</span></div>
+          <div class="bg-shadow-card" style="box-shadow: var(--shadow-md);"><span>--shadow-md</span></div>
+          <div class="bg-shadow-card" style="box-shadow: var(--shadow-lg);"><span>--shadow-lg</span></div>
+        </div>
+      </div>
+
+      <div class="bg-subsection">
+        <p class="bg-subsection-title">Border Radius</p>
+        <div style="display: flex; gap: var(--space-md); align-items: center; flex-wrap: wrap;">
+          <div style="width: 80px; height: 80px; background: var(--color-accent-light); border: 1px dashed var(--color-accent); border-radius: var(--radius); display: flex; align-items: center; justify-content: center;">
+            <span class="bg-type-meta" style="margin: 0;">6px</span>
+          </div>
+          <div style="width: 80px; height: 80px; background: var(--color-accent-light); border: 1px dashed var(--color-accent); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center;">
+            <span class="bg-type-meta" style="margin: 0;">12px</span>
+          </div>
+          <div style="width: 80px; height: 80px; background: var(--color-accent-light); border: 1px dashed var(--color-accent); border-radius: 100px; display: flex; align-items: center; justify-content: center;">
+            <span class="bg-type-meta" style="margin: 0;">pill</span>
+          </div>
+        </div>
+        <p class="bg-type-meta" style="margin-top: 1rem;"><span class="bg-code">--radius: 6px</span> &middot; <span class="bg-code">--radius-lg: 12px</span> &middot; <span class="bg-code">100px</span> (pills/tags)</p>
+      </div>
+
+      <div class="bg-subsection">
+        <p class="bg-subsection-title">Container</p>
+        <p style="font-size: 0.92rem; color: var(--color-text-muted); line-height: 1.7;">Max width: <span class="bg-code">1160px</span> with <span class="bg-code">2rem</span> horizontal padding. Class: <span class="bg-code">.container</span></p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 8. Grid Layouts -->
+  <section class="bg-section">
+    <div class="container">
+      <h2 class="bg-section-title">Grid Layouts</h2>
+      <p class="bg-section-intro">Standard grid configurations used across the site. All grids collapse responsively.</p>
+
+      <div class="bg-subsection">
+        <p class="bg-subsection-title">3-Column (Default)</p>
+        <div class="bg-grid-demo" style="grid-template-columns: repeat(3, 1fr);">
+          <div class="bg-grid-cell">1</div>
+          <div class="bg-grid-cell">2</div>
+          <div class="bg-grid-cell">3</div>
+        </div>
+        <p class="bg-type-meta">Used by: <span class="bg-code">.pillar-grid</span> &middot; <span class="bg-code">.principles-grid</span> &middot; <span class="bg-code">.pathway-grid</span> &middot; <span class="bg-code">.steps-grid</span></p>
+      </div>
+
+      <div class="bg-subsection">
+        <p class="bg-subsection-title">4-Column</p>
+        <div class="bg-grid-demo" style="grid-template-columns: repeat(4, 1fr);">
+          <div class="bg-grid-cell">1</div>
+          <div class="bg-grid-cell">2</div>
+          <div class="bg-grid-cell">3</div>
+          <div class="bg-grid-cell">4</div>
+        </div>
+        <p class="bg-type-meta">Used by: <span class="bg-code">.locations-grid</span> &middot; <span class="bg-code">.principles-grid--four</span></p>
+      </div>
+
+      <div class="bg-subsection">
+        <p class="bg-subsection-title">Content + Sidebar</p>
+        <div class="bg-grid-demo" style="grid-template-columns: 1.6fr 1fr;">
+          <div class="bg-grid-cell">Content (1.6fr)</div>
+          <div class="bg-grid-cell">Sidebar (1fr)</div>
+        </div>
+        <p class="bg-type-meta">Used by: <span class="bg-code">.contact-layout</span></p>
+      </div>
+
+      <div class="bg-subsection">
+        <p class="bg-subsection-title">Footer Grid</p>
+        <div class="bg-grid-demo" style="grid-template-columns: 2fr 1fr 1fr 1fr;">
+          <div class="bg-grid-cell">Brand (2fr)</div>
+          <div class="bg-grid-cell">Links</div>
+          <div class="bg-grid-cell">Contact</div>
+          <div class="bg-grid-cell">Useful</div>
+        </div>
+        <p class="bg-type-meta">Used by: <span class="bg-code">.footer-grid</span></p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 9. Decorative Patterns -->
+  <section class="bg-section">
+    <div class="container">
+      <h2 class="bg-section-title">Decorative Elements</h2>
+      <p class="bg-section-intro">Consistent accent lines and gradients create visual cohesion across the site.</p>
+
+      <div class="bg-component-row">
+        <div class="bg-component-box">
+          <span class="bg-component-label">Accent Top Bar (Cards)</span>
+          <div style="height: 3px; background: linear-gradient(90deg, var(--color-ica-red), var(--color-accent)); border-radius: 2px; margin-bottom: 1rem;"></div>
+          <p class="bg-type-meta" style="margin: 0;">ICA Red &rarr; Gold gradient. Used on pathway, location, contact-info, and about-role cards.</p>
+        </div>
+        <div class="bg-component-box">
+          <span class="bg-component-label">Footer Top Line</span>
+          <div style="height: 3px; background: linear-gradient(90deg, var(--color-ica-red) 0%, var(--color-accent) 50%, var(--color-sage) 100%); border-radius: 2px; margin-bottom: 1rem;"></div>
+          <p class="bg-type-meta" style="margin: 0;">ICA Red &rarr; Gold &rarr; Sage. Full three-colour gradient.</p>
+        </div>
+      </div>
+
+      <div class="bg-component-row">
+        <div class="bg-component-box">
+          <span class="bg-component-label">Section Divider (H2 Underline)</span>
+          <div style="width: 48px; height: 2px; background: var(--color-accent); margin-bottom: 1rem;"></div>
+          <p class="bg-type-meta" style="margin: 0;">48px wide, 2px gold accent line. Applied via <span class="bg-code">.section h2::after</span></p>
+        </div>
+        <div class="bg-component-box">
+          <span class="bg-component-label">Disclaimer / Aside</span>
+          <div class="disclaimer" style="margin-top: 0;">Example disclaimer or aside text with a gold left border for emphasis.</div>
+          <p class="bg-type-meta" style="margin-top: 0.5rem;">Class: <span class="bg-code">.disclaimer</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 10. Tone of Voice -->
+  <section class="bg-section">
+    <div class="container">
+      <h2 class="bg-section-title">Tone of Voice</h2>
+      <p class="bg-section-intro">The ROSE Network's voice should be consistent across all communications.</p>
+
+      <div class="bg-component-row">
+        <div class="bg-component-box">
+          <span class="bg-component-label">We Are</span>
+          <ul style="list-style: none; padding: 0;">
+            <li style="padding: 0.3rem 0; color: var(--color-text-muted); font-size: 0.92rem;">Professional and authoritative</li>
+            <li style="padding: 0.3rem 0; color: var(--color-text-muted); font-size: 0.92rem;">Supportive and encouraging</li>
+            <li style="padding: 0.3rem 0; color: var(--color-text-muted); font-size: 0.92rem;">Military-aware without jargon</li>
+            <li style="padding: 0.3rem 0; color: var(--color-text-muted); font-size: 0.92rem;">Trustworthy and discreet</li>
+            <li style="padding: 0.3rem 0; color: var(--color-text-muted); font-size: 0.92rem;">Accessible to all Corps family members</li>
+          </ul>
+        </div>
+        <div class="bg-component-box">
+          <span class="bg-component-label">We Are Not</span>
+          <ul style="list-style: none; padding: 0;">
+            <li style="padding: 0.3rem 0; color: var(--color-text-muted); font-size: 0.92rem;">Casual or informal</li>
+            <li style="padding: 0.3rem 0; color: var(--color-text-muted); font-size: 0.92rem;">Overly corporate or impersonal</li>
+            <li style="padding: 0.3rem 0; color: var(--color-text-muted); font-size: 0.92rem;">Heavy on military acronyms</li>
+            <li style="padding: 0.3rem 0; color: var(--color-text-muted); font-size: 0.92rem;">Salesy or promotional</li>
+            <li style="padding: 0.3rem 0; color: var(--color-text-muted); font-size: 0.92rem;">Exclusive or gatekeeping</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-component-box" style="max-width: 600px;">
+        <span class="bg-component-label">Language Notes</span>
+        <ul style="list-style: none; padding: 0;">
+          <li style="padding: 0.3rem 0; color: var(--color-text-muted); font-size: 0.92rem;">British English throughout (colour, organisation, defence)</li>
+          <li style="padding: 0.3rem 0; color: var(--color-text-muted); font-size: 0.92rem;">"Corps family" — includes Regulars, Reserves, Veterans, and immediate family</li>
+          <li style="padding: 0.3rem 0; color: var(--color-text-muted); font-size: 0.92rem;">"Service Leavers" — those transitioning out of military service</li>
+          <li style="padding: 0.3rem 0; color: var(--color-text-muted); font-size: 0.92rem;">"Networkers" — civilian members who provide advice and connections</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="assets/rose-network-logo-portrait.png" alt="The ROSE Network" class="footer-logo">
+          <p class="footer-brand">The ROSE Network</p>
+          <p class="footer-brand-sub">Intelligence Corps Association</p>
+          <p>An exclusive professional network for the Intelligence Corps community. Every member adds value. Every connection compounds.</p>
+        </div>
+        <div class="footer-col">
+          <h4>The Network</h4>
+          <ul>
+            <li><a href="/transition">Transition</a></li>
+            <li><a href="/professional-network">Professional Network</a></li>
+            <li><a href="/enterprise">Enterprise</a></li>
+            <li><a href="/events">Events</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/#governance">Governance</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li>Headquarters ICA</li>
+            <li>Mrs Hazel Donald</li>
+            <li><a href="mailto:ica_hq@roseandlaurel.uk">ica_hq@roseandlaurel.uk</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="https://www.roseandlaurel.uk/" target="_blank" rel="noopener">Intelligence Corps Association</a></li>
+            <li><a href="https://www.veteransgateway.org.uk/" target="_blank" rel="noopener">Veterans Gateway</a></li>
+            <li><a href="https://www.ssafa.org.uk/" target="_blank" rel="noopener">SSAFA</a></li>
+            <li><a href="https://www.britishlegion.org.uk/" target="_blank" rel="noopener">Royal British Legion</a></li>
+            <li><a href="https://www.cobseo.org.uk/" target="_blank" rel="noopener">COBSEO</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; Intelligence Corps Association. All rights reserved.</p>
+        <p class="footer-charity">Registered Charity No. 1175211</p>
+        <p class="footer-legal"><a href="/privacy-policy">Privacy Policy</a> &middot; <a href="/cookie-policy">Cookie Policy</a> &middot; <a href="/terms-of-use">Terms of Use</a> &middot; <button id="cookie-settings" class="cookie-settings-link" type="button">Cookie Settings</button></p>
+        <p class="footer-credit"><a href="/brand-guidelines">Brand Guidelines</a> &middot; Website by <a href="https://hermesdigital.co.uk/" target="_blank" rel="noopener">Hermes Digital</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Cookie consent" aria-hidden="true">
+    <div class="cookie-banner-inner">
+      <p class="cookie-banner-text">We use cookies to analyse site usage and improve your experience. By accepting, you consent to our use of cookies in accordance with our <a href="/privacy-policy">Privacy Policy</a>.</p>
+      <div class="cookie-banner-actions">
+        <button id="cookie-reject" class="cookie-btn cookie-btn--reject" type="button">Reject</button>
+        <button id="cookie-accept" class="cookie-btn cookie-btn--accept" type="button">Accept</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      var banner = document.getElementById('cookie-banner');
+      var consent = null;
+      try { consent = localStorage.getItem('cookie_consent'); } catch (e) {}
+      if (consent === null) {
+        banner.setAttribute('aria-hidden', 'false');
+        banner.classList.add('is-visible');
+      }
+      document.getElementById('cookie-accept').addEventListener('click', function() {
+        try { localStorage.setItem('cookie_consent', 'granted'); } catch (e) {}
+        banner.classList.remove('is-visible');
+        banner.setAttribute('aria-hidden', 'true');
+      });
+      var settingsBtn = document.getElementById('cookie-settings');
+      if (settingsBtn) {
+        settingsBtn.addEventListener('click', function() {
+          banner.setAttribute('aria-hidden', 'false');
+          banner.classList.add('is-visible');
+        });
+      }
+      document.getElementById('cookie-reject').addEventListener('click', function() {
+        try { localStorage.setItem('cookie_consent', 'denied'); } catch (e) {}
+        banner.classList.remove('is-visible');
+        banner.setAttribute('aria-hidden', 'true');
+      });
+    })();
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var toggle = document.querySelector('.nav-toggle');
+      var nav = document.querySelector('.site-nav');
+      if (toggle && nav) {
+        toggle.addEventListener('click', function () {
+          var expanded = toggle.getAttribute('aria-expanded') === 'true';
+          toggle.setAttribute('aria-expanded', String(!expanded));
+          nav.classList.toggle('is-open');
+        });
+        nav.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            nav.classList.remove('is-open');
+            toggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
