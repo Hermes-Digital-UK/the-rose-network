@@ -4,8 +4,9 @@
    meets modern editorial design.
    ============================================================ */
 
-/* --- Fonts --- */
-@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Figtree:wght@400;500;600;700&display=swap');
+/* --- Fonts ---
+   Loaded via <link> tags in HTML <head> for performance.
+   Do not use @import here — it blocks rendering. */
 
 /* --- Reset & Base --- */
 *, *::before, *::after {
@@ -1103,9 +1104,12 @@ h2 {
   }
 
   .principles-grid,
-  .principles-grid--four,
-  .locations-grid {
+  .principles-grid--four {
     grid-template-columns: 1fr;
+  }
+
+  .locations-grid {
+    grid-template-columns: 1fr 1fr;
   }
 
   .pillar-grid,
@@ -2461,8 +2465,13 @@ h2 {
     grid-template-columns: 1fr;
   }
 
+  .esprit-quote {
+    font-size: 1.15rem;
+    padding-left: var(--space-sm);
+  }
+
   .insights-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .insight-featured {
@@ -2487,6 +2496,14 @@ h2 {
 
   .pillar-grid-enhanced {
     grid-template-columns: 1fr;
+  }
+
+  .insight-subscribe {
+    padding: var(--space-md);
+  }
+
+  .insight-subscribe h3 {
+    font-size: 1.35rem;
   }
 }
 
@@ -2534,6 +2551,160 @@ h2 {
 
   .insight-featured .insight-card-body h3 {
     font-size: 1.25rem;
+  }
+
+  .insights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-roles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-two-col {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding-left: var(--space-sm);
+    padding-right: var(--space-sm);
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .hero {
+    padding: 2.5rem 0 2rem;
+  }
+
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-description {
+    font-size: 0.92rem;
+  }
+
+  .hero--dramatic h1 {
+    font-size: 1.85rem;
+  }
+
+  .hero--dramatic .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero--compact h1 {
+    font-size: 1.65rem;
+  }
+
+  .section {
+    padding: 2.5rem 0;
+  }
+
+  .section-lead {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.82rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .section-actions .btn,
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xs);
+  }
+
+  .stat-number {
+    font-size: 1.8rem;
+  }
+
+  .stat-label {
+    font-size: 0.65rem;
+  }
+
+  .principle-card {
+    padding: var(--space-sm);
+  }
+
+  .step-card {
+    padding: var(--space-sm);
+  }
+
+  .esprit-quote {
+    font-size: 1rem;
+  }
+
+  .section-image-break {
+    height: 200px;
+  }
+
+  .section-image-break-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .insight-card-image,
+  .pillar-card-image {
+    height: 160px;
+  }
+
+  .insight-subscribe {
+    padding: var(--space-sm);
+  }
+
+  .insight-subscribe h3 {
+    font-size: 1.15rem;
+  }
+
+  .insight-subscribe p {
+    font-size: 0.88rem;
+  }
+
+  .about-intro h2 {
+    font-size: 1.65rem;
+  }
+
+  .locations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    gap: var(--space-sm);
+  }
+
+  .site-footer {
+    padding: var(--space-lg) 0 0;
+  }
+}
+
+/* --- Legal Table Mobile Scroll --- */
+@media (max-width: 600px) {
+  .legal-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .legal-table {
+    min-width: 480px;
   }
 }
 
