@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Constitution — The ROSE Network</title>
+  <meta name="description" content="The Intelligence Corps Association Constitution — the charitable framework under which The ROSE Network operates. Registered Charity No. 1175211.">
+  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Google Consent Mode v2 — must fire before GTM -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'functionality_storage': 'denied',
+      'personalization_storage': 'denied',
+      'security_storage': 'granted',
+      'wait_for_update': 500
+    });
+    gtag('set', 'ads_data_redaction', true);
+    gtag('set', 'url_passthrough', true);
+
+    // Restore consent if previously granted
+    (function() {
+      try {
+        var consent = localStorage.getItem('cookie_consent');
+        if (consent === 'granted') {
+          gtag('consent', 'update', {
+            'ad_storage': 'granted',
+            'ad_user_data': 'granted',
+            'ad_personalization': 'granted',
+            'analytics_storage': 'granted',
+            'functionality_storage': 'granted',
+            'personalization_storage': 'granted'
+          });
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WS8WK4Q9');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "ICA Constitution",
+    "description": "The Intelligence Corps Association Constitution — the charitable framework under which The ROSE Network operates.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://rose.roseandlaurel.uk/#website"
+    },
+    "about": {
+      "@type": "Organization",
+      "@id": "https://rose.roseandlaurel.uk/#organization",
+      "name": "ICA Resettlement & Support for Employment 'Rose' Network"
+    }
+  }
+  </script>
+
+  <style>
+    /* Constitution-specific styles */
+    .constitution-highlight {
+      background-color: var(--color-surface);
+      border-left: 3px solid var(--color-accent);
+      padding: var(--space-md);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      margin-top: var(--space-md);
+    }
+
+    .constitution-highlight h3 {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--color-primary-dark);
+      margin-bottom: var(--space-xs);
+    }
+
+    .constitution-highlight p,
+    .constitution-highlight li {
+      color: var(--color-text-muted);
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    .constitution-highlight ol {
+      padding-left: 1.5rem;
+      margin-top: var(--space-xs);
+    }
+
+    .constitution-highlight ol li {
+      margin-bottom: 0.5rem;
+    }
+
+    .constitution-highlight .clause-ref {
+      font-size: 0.8rem;
+      color: var(--color-text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .constitution-full {
+      margin-top: var(--space-lg);
+    }
+
+    .constitution-full details {
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius);
+      margin-bottom: var(--space-sm);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .constitution-full details[open] {
+      box-shadow: var(--shadow-md);
+    }
+
+    .constitution-full summary {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--color-primary-dark);
+      padding: var(--space-sm) var(--space-md);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background-color var(--transition);
+      user-select: none;
+    }
+
+    .constitution-full summary:hover {
+      background-color: var(--color-highlight);
+    }
+
+    .constitution-full summary::after {
+      content: '+';
+      font-size: 1.2rem;
+      color: var(--color-text-light);
+      font-weight: 400;
+      flex-shrink: 0;
+      margin-left: var(--space-sm);
+      transition: transform var(--transition);
+    }
+
+    .constitution-full details[open] > summary::after {
+      content: '\2212';
+    }
+
+    .constitution-full summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .constitution-full .clause-body {
+      padding: 0 var(--space-md) var(--space-md);
+      color: var(--color-text-muted);
+      font-size: 0.9rem;
+      line-height: 1.85;
+    }
+
+    .constitution-full .clause-body p {
+      margin-top: var(--space-xs);
+    }
+
+    .constitution-full .clause-body ol,
+    .constitution-full .clause-body ul {
+      padding-left: 1.5rem;
+      margin-top: var(--space-xs);
+    }
+
+    .constitution-full .clause-body ol ol,
+    .constitution-full .clause-body ul ul {
+      margin-top: 0.25rem;
+    }
+
+    .constitution-full .clause-body li {
+      margin-bottom: 0.4rem;
+    }
+
+    .constitution-full .clause-body ol {
+      list-style-type: lower-alpha;
+    }
+
+    .constitution-full .clause-body > ol {
+      list-style-type: decimal;
+    }
+
+    .constitution-full .clause-body ol ol ol {
+      list-style-type: lower-roman;
+    }
+
+    .constitution-note {
+      font-size: 0.85rem;
+      color: var(--color-text-light);
+      font-style: italic;
+      margin-top: var(--space-md);
+      padding-top: var(--space-sm);
+      border-top: 1px solid var(--color-border-light);
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WS8WK4Q9"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- ICA Affiliation Bar -->
+  <div class="ica-bar">
+    <div class="container">
+      <span class="ica-bar-label">Part of the <a href="https://www.roseandlaurel.uk/">Intelligence Corps Association</a></span>
+      <div class="ica-bar-links">
+        <a href="https://www.roseandlaurel.uk/">ICA Main Site</a>
+        <a href="https://www.roseandlaurel.uk/Members/Apply-for-Membership">ICA Membership</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Navigation -->
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="site-logo">
+        <img src="/assets/rose-network-logo-horizontal.png" alt="The ROSE Network — Intelligence Corps Association" class="site-logo-img">
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/transition">Transition</a></li>
+          <li><a href="/professional-network">Network</a></li>
+          <li><a href="/enterprise">Enterprise</a></li>
+          <li><a href="/events">Events</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" style="padding-bottom: var(--space-lg);">
+    <div class="container">
+      <h1>ICA Constitution</h1>
+      <p class="hero-subtitle">The charitable framework behind the network.</p>
+      <p class="hero-description">The ROSE Network operates under the Intelligence Corps Association, a Charitable Incorporated Organisation registered with the Charity Commission (No. 1175211).</p>
+    </div>
+  </section>
+
+  <!-- Why This Matters -->
+  <section class="section section-about">
+    <div class="container">
+      <div class="page-content">
+        <div class="reveal">
+          <h2>Why This Matters</h2>
+          <p class="section-lead">Everything The ROSE Network does is grounded in the ICA's charitable objects. These aren't formalities — they're the reason we exist.</p>
+          <p>The constitution was adopted in 2017 and establishes the ICA as a Charitable Incorporated Organisation with voting members. It defines who the Association serves, how it's governed, and the charitable purposes that guide every initiative — including The ROSE Network.</p>
+          <p>Below we've drawn out the clauses most relevant to our mission, followed by the full constitution for reference.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Highlighted Clauses -->
+  <section class="section section-mentoring">
+    <div class="container">
+      <div class="reveal">
+        <h2>Relevant to Our Mission</h2>
+        <p class="section-lead">The clauses that directly shape what The ROSE Network does and who it serves.</p>
+      </div>
+
+      <div class="constitution-highlight reveal">
+        <span class="clause-ref">Clause 3 — Objects</span>
+        <h3>Promoting well-being and fostering esprit de corps</h3>
+        <p>The first object of the ICA is the promotion of the well-being and efficiency of the Intelligence Corps by charitable means, including fostering esprit de corps and maintaining contact between past and present members.</p>
+        <p style="margin-top: 0.75rem;">This is the foundation of The ROSE Network — every event, every connection, every introduction exists to keep the Corps Family together and moving forward.</p>
+      </div>
+
+      <div class="constitution-highlight reveal">
+        <span class="clause-ref">Clause 3(3) — Objects</span>
+        <h3>Relief of those in need</h3>
+        <p>The relief of qualifying beneficiaries who are in need, by reason of youth, age, ill health, disability, financial hardship or other disadvantage.</p>
+        <p style="margin-top: 0.75rem;">Transition from military service can be one of those moments. The ROSE Network exists to ensure no one navigates it alone — connecting people with advice, mentoring, and employment opportunities.</p>
+      </div>
+
+      <div class="constitution-highlight reveal">
+        <span class="clause-ref">Clause 9 — Membership</span>
+        <h3>The Corps Family</h3>
+        <p>The constitution defines membership across serving Regulars and Reserves, retired members, Associate members from other regiments, and next of kin of deceased members. This breadth is deliberate.</p>
+        <p style="margin-top: 0.75rem;">The ROSE Network mirrors this — our events, forums, and support are open to the whole Corps Family: serving, transitioning, veteran, reserve, and immediate family.</p>
+      </div>
+
+      <div class="constitution-highlight reveal">
+        <span class="clause-ref">Clause 12(4) — First Charity Trustees</span>
+        <h3>ROSE Network representation at trustee level</h3>
+        <p>The Chair of the Intelligence Corps Association Resettlement and Employment Cell sits as an ex-officio charity trustee. This means The ROSE Network has a direct voice in the governance of the ICA, ensuring employment and transition support remains a strategic priority.</p>
+      </div>
+
+      <div class="constitution-highlight reveal">
+        <span class="clause-ref">Clause 13 — Relationship with the Corps Council</span>
+        <h3>Corps-level alignment</h3>
+        <p>The Corps Council has the right to advise and make representations to charity trustees. This relationship ensures The ROSE Network's work aligns with the Corps' broader strategy, while the charity trustees retain independence in decision-making.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Full Constitution -->
+  <section class="section section-about">
+    <div class="container">
+      <div class="page-content">
+        <div class="reveal">
+          <h2>Full Constitution</h2>
+          <p class="section-lead">Constitution of a Charitable Incorporated Organisation with voting members other than its charity trustees. Date of constitution: 2017.</p>
+        </div>
+      </div>
+
+      <div class="constitution-full">
+
+        <details class="reveal">
+          <summary>1. Name</summary>
+          <div class="clause-body">
+            <p>The name of the Charitable Incorporated Organisation is: The Intelligence Corps Association ("ICA")</p>
+          </div>
+        </details>
+
+        <details class="reveal">
+          <summary>2. National location of principal office</summary>
+          <div class="clause-body">
+            <p>The principal office of ICA is in England.</p>
+          </div>
+        </details>
+
+        <details class="reveal">
+          <summary>3. Objects</summary>
+          <div class="clause-body">
+            <p>The objects of ICA are:</p>
+            <ol>
+              <li>The promotion of the well-being and efficiency of Her Majesty's Army, and in particular the Intelligence Corps (the Corps), by such charitable means as the charity trustees deem fit including, but not limited to, fostering esprit de corps and maintaining contact between past and present members of the Corps.</li>
+              <li>The education of the public in the role, history, traditions, customs and ethos of the Corps, including the provision of support to the Military Intelligence Museum.</li>
+              <li>The relief of qualifying beneficiaries who are in need, by reason of youth, age, ill health, disability, financial hardship or other disadvantage.</li>
+              <li>The commemoration and remembrance of those members, or former members, of the Armed Forces of the Crown, in particular of the Corps, who have lost their lives or suffered injury, or put themselves at risk of loss of life or injury, in service to the public.</li>
+              <li>Any other charitable purpose as the charity trustees deem fit for the benefit of qualifying beneficiaries.</li>
+            </ol>
+            <p>Nothing in this constitution shall authorise an application of the property of ICA for the purposes which are not charitable in accordance with section 7 of the Charities and Trustee Investment (Scotland) Act 2005 and section 2 of the Charities Act (Northern Ireland) 2008.</p>
+          </div>
+        </details>
+
+        <details class="reveal">
+          <summary>4. Powers</summary>
+          <div class="clause-body">
+            <p>ICA has the power to do anything which is calculated to further its objects or is conducive or incidental to doing so. In particular, ICA's powers include power to:</p>
+            <ol>
+              <li>Borrow money and to charge the whole or any part of its property as security for the repayment of the money borrowed. ICA must comply as appropriate with sections 124 and 125 of the Charities Act 2011 if it wishes to mortgage land.</li>
+              <li>Buy, take on lease or in exchange, hire or otherwise acquire any property and to maintain and equip it for use.</li>
+              <li>Sell, lease or otherwise dispose of all or any part of the property belonging to ICA. In exercising this power, ICA must comply as appropriate with sections 117 and 119–123 of the Charities Act 2011.</li>
+              <li>Employ and remunerate such staff as are necessary for carrying out the work of ICA. ICA may employ or remunerate a charity trustee only to the extent that it is permitted to do so by clause 6 (Benefits and payments to charity trustees and connected persons) and provided it complies with the conditions of those clauses.</li>
+              <li>Deposit or invest funds, employ a professional fund-manager, and arrange for the investments or other property of ICA to be held in the name of a nominee, in the same manner and subject to the same conditions as the trustees of a trust are permitted to do by the Trustee Act 2000.</li>
+            </ol>
+          </div>
+        </details>
+
+        <details class="reveal">
+          <summary>5. Application of income and property</summary>
+          <div class="clause-body">
+            <ol>
+              <li>The income and property of the ICA must be applied solely towards the promotion of the objects.
+                <ol>
+                  <li>A charity trustee is entitled to be reimbursed from the property of the ICA or may pay out of such property reasonable expenses properly incurred by him or her when acting on behalf of ICA.</li>
+                  <li>A charity trustee may benefit from trustee indemnity insurance cover purchased at ICA's expense in accordance with, and subject to the conditions in, section 189 of the Charities Act 2011.</li>
+                </ol>
+              </li>
+              <li>None of the income or property of the ICA may be paid or transferred directly or indirectly by way of dividend, bonus or otherwise by way of profit to any member of ICA. This does not prevent a member who is not also a charity trustee receiving:
+                <ol>
+                  <li>a benefit from the ICA as a beneficiary of ICA;</li>
+                  <li>reasonable and proper remuneration for any goods or services supplied to ICA.</li>
+                </ol>
+              </li>
+              <li>Nothing in this clause shall prevent a charity trustee or connected person receiving any benefit or payment which is authorised by Clause 6.</li>
+            </ol>
+          </div>
+        </details>
+
+        <details class="reveal">
+          <summary>6. Benefits and payments to charity trustees and connected persons</summary>
+          <div class="clause-body">
+            <ol>
+              <li><strong>General provisions.</strong> No charity trustee or connected person may: buy or receive any goods or services from ICA on terms preferential to those applicable to members of the public; sell goods, services, or any interest in land to ICA; be employed by, or receive any remuneration from, ICA; or receive any other financial benefit from ICA — unless the payment or benefit is permitted by sub-clause (2) of this clause, or authorised by the court or the prior written consent of the Charity Commission has been obtained.</li>
+              <li><strong>Scope and powers permitting benefits.</strong>
+                <ol>
+                  <li>A charity trustee or connected person may receive a benefit from ICA as a beneficiary of ICA provided that a majority of the trustees do not benefit in this way.</li>
+                  <li>A charity trustee or connected person may enter into a contract for the supply of services, or of goods that are supplied in connection with the provision of services, to the ICA where that is permitted in accordance with, and subject to the conditions in, sections 185 to 188 of the Charities Act 2011.</li>
+                  <li>Subject to sub-clause (3) of this clause a charity trustee or connected person may provide ICA with goods that are not supplied in connection with services provided to ICA by the charity trustee or connected person.</li>
+                  <li>A charity trustee or connected person may receive interest on money lent to ICA at a reasonable and proper rate which must be not more than the Bank of England bank rate.</li>
+                  <li>A charity trustee or connected person may receive rent for premises let by the trustee or connected person to ICA. The amount of the rent and the other terms of the lease must be reasonable and proper.</li>
+                  <li>A charity trustee or connected person may take part in the normal trading and fundraising activities of the ICA on the same terms as members of the public.</li>
+                </ol>
+              </li>
+              <li><strong>Payment for supply of goods only — controls.</strong> ICA and its charity trustees may only rely upon the authority provided by sub-clause (2)(c) if each of the following conditions is satisfied: the amount or maximum amount of the payment is set out in a written agreement; the amount does not exceed what is reasonable; the other trustees are satisfied it is in the best interests of ICA; the supplier is absent from relevant discussions; the supplier does not vote; the reason for the decision is recorded; and a majority of trustees are not in receipt of remuneration authorised by clause 6.</li>
+            </ol>
+          </div>
+        </details>
+
+        <details class="reveal">
+          <summary>7. Conflicts of interest and conflicts of loyalty</summary>
+          <div class="clause-body">
+            <p>A charity trustee must:</p>
+            <ol>
+              <li>Declare the nature and extent of any interest, direct or indirect, which he or she has in a proposed transaction or arrangement with ICA or in any transaction or arrangement entered into by ICA which has not previously been declared.</li>
+              <li>Absent himself or herself from any discussions of the charity trustees in which it is possible that a conflict of interest will arise between his or her duty to act solely in the interests of ICA and any personal interest.</li>
+            </ol>
+            <p>Any charity trustee absenting himself or herself from any discussions in accordance with this clause must not vote or be counted as part of the quorum in any decision of the charity trustees on the matter.</p>
+          </div>
+        </details>
+
+        <details class="reveal">
+          <summary>8. Liability of members</summary>
+          <div class="clause-body">
+            <p>If ICA is wound up, the members of ICA have no liability to contribute to its assets and no personal responsibility for settling its debts and liabilities.</p>
+          </div>
+        </details>
+
+        <details class="reveal">
+          <summary>9. Membership of ICA</summary>
+          <div class="clause-body">
+            <p><strong>(1) Categories of membership:</strong></p>
+            <ol>
+              <li><strong>Full Membership.</strong> All those officers and soldiers serving in the Corps both Regular and Reserve (membership for Regulars and Reserves is conditional on contributing through the Charity Payroll Giving Scheme). All retired officers and soldiers of the Corps, both Regular and Reserve, at retired members' rates.</li>
+              <li><strong>Associate Membership.</strong> Available to all those serving and retired officers and servicemen/women of other Regiments, Corps and Services who wish to remain associated with the Corps. Associate members may attend general meetings but do not have voting rights.</li>
+              <li><strong>Associate (Next of Kin) Membership.</strong> Available to the next of kin of deceased Association members at no cost. May attend general meetings but do not have voting rights.</li>
+              <li><strong>Honorary Membership.</strong> Available at the discretion of the charity trustees to persons holding temporary office with or associated with the Corps, including Honorary Colonels of Reserve MI Battalions, Honorary Colonel Reserves, and Colonel Commandant if not already members.</li>
+              <li><strong>Honorary Life Membership.</strong> Available at the discretion of the charity trustees to persons holding prestigious appointments in civilian life; individuals who have provided the Corps with exceptional service; those who have held important and long-standing offices in the Corps; retired Colonels Commandant; and Masters of the Worshipful Company of Painter-Stainers.</li>
+            </ol>
+
+            <p><strong>(2) Admission procedure.</strong> The charity trustees may require applications for membership to be made in any reasonable way; may refuse an application if in the best interests of the ICA; shall give reasons for refusal within 21 days; and shall give fair consideration to any appeal.</p>
+
+            <p><strong>(3) Duty of members.</strong> It is the duty of each member to exercise his or her powers as a member in the way he or she decides in good faith would be most likely to further the purposes of ICA.</p>
+
+            <p><strong>(4) Termination of membership.</strong> Membership is terminated if the member dies; leaves the service and does not rejoin as a retired member; is discharged on grounds of misconduct; the annual subscription is not paid within six months; or the member is removed by resolution of the charity trustees in the best interests of the Charity, subject to proper notice and the right to make representations.</p>
+
+            <p><strong>(5) Membership fees.</strong> ICA may require members to pay reasonable membership fees to ICA.</p>
+          </div>
+        </details>
+
+        <details class="reveal">
+          <summary>10. Members' decisions</summary>
+          <div class="clause-body">
+            <p>Decisions of the members may be taken by vote at a general meeting or by written resolution agreed by a simple majority. Certain decisions must be taken in a particular way: removal of a charity trustee (clause 15(2)); amendment of the constitution (clause 28); winding up or dissolution (clause 29).</p>
+          </div>
+        </details>
+
+        <details class="reveal">
+          <summary>11. General meetings of members</summary>
+          <div class="clause-body">
+            <p>There must be an annual general meeting (AGM) at intervals of not more than 15 months. The AGM must receive the annual statement of accounts and trustees' annual report, and elect trustees. Other general meetings may be held at any time.</p>
+            <p>The charity trustees must call a general meeting within 21 days if they receive a request from at least 10% of members (5% if no general meeting has been held for more than 12 months).</p>
+            <p>At least 14 clear days' notice must be given for any general meeting. The quorum for general meetings is 25 members. Decisions are taken by simple majority of votes cast, with postal and proxy voting permitted.</p>
+          </div>
+        </details>
+
+        <details class="reveal">
+          <summary>12. Charity trustees</summary>
+          <div class="clause-body">
+            <p><strong>Functions and duties.</strong> The charity trustees manage the affairs of ICA and must exercise their powers in good faith to further the purposes of ICA, with such care and skill as is reasonable.</p>
+
+            <p><strong>Eligibility.</strong> Every charity trustee must be a natural person aged 16 or over.</p>
+
+            <p><strong>Number.</strong> Not less than three nor more than eight co-opted trustees; eight ex-officio trustees; and not less than one nor more than two nominated trustees. There must be at least eight charity trustees.</p>
+
+            <p><strong>First charity trustees.</strong></p>
+            <p>Ex-officio charity trustees: Deputy Colonel Commandant; Corps Colonel; Corps Chief of Staff; Corps Adjutant; Corps Command Sergeant Major; Deputy Corps Colonel; Corps Secretary; Chair Intelligence Corps Association Resettlement and Employment Cell.</p>
+            <p>Nominated charity trustees (one each of): Military Intelligence Battalion Regimental Sergeant Major; Military Intelligence Battalion Major.</p>
+            <p>Co-opted charity trustees (elected): two Regional Secretaries; two Veterans; four Skills Based individuals.</p>
+
+            <p><strong>Nominated Charity Trustees.</strong> The Intelligence Corps Colonel shall appoint two charity trustees — a Major and a Regimental Sergeant Major from a Military Intelligence Battalion — for two years or until they relinquish their post.</p>
+          </div>
+        </details>
+
+        <details class="reveal">
+          <summary>13. Relationship with the Corps Council</summary>
+          <div class="clause-body">
+            <p>The Corps Council has the right to provide advice and make representations to ICA Charity Trustees in respect of the Association's strategy and policies. The charity trustees shall take account of any such advice or representations but shall not be bound to follow them.</p>
+            <p>The relationship is underpinned through quarterly review meetings involving the Intelligence Corps Colonel Commandant, the Intelligence Corps Colonel and the Intelligence Corps Deputy Colonel Commandant.</p>
+          </div>
+        </details>
+
+        <details class="reveal">
+          <summary>14. Information for new charity trustees</summary>
+          <div class="clause-body">
+            <p>The charity trustees will make available to each new charity trustee: a copy of the constitution and any amendments; a copy of ICA's latest trustees' annual report and statement of accounts; and a form to confirm acceptance of appointment.</p>
+          </div>
+        </details>
+
+        <details class="reveal">
+          <summary>15. Retirement and removal of charity trustees</summary>
+          <div class="clause-body">
+            <p>A charity trustee ceases to hold office if he or she: retires by notifying ICA in writing; is absent without permission from all meetings within six months; dies; becomes physically or mentally incapable; is removed by the members; is disqualified under the Charities Act 2011; or ceases to hold the relevant ex-officio office.</p>
+            <p>A charity trustee shall be removed from office if a resolution is passed by a two-thirds majority at a general meeting called for that purpose, provided the trustee has been given at least 14 clear days' notice and a reasonable opportunity to make representations.</p>
+          </div>
+        </details>
+
+        <details class="reveal">
+          <summary>16. Reappointment of co-opted charity trustees</summary>
+          <div class="clause-body">
+            <p>Any person who retires as a charity trustee giving notice to ICA is eligible for reappointment.</p>
+          </div>
+        </details>
+
+        <details class="reveal">
+          <summary>17. Taking of decisions by charity trustees</summary>
+          <div class="clause-body">
+            <p>Any decision may be taken at a meeting of the charity trustees, or by resolution in writing or electronic form agreed by a majority of all of the charity trustees, provided a copy of the proposed resolution has been sent to all trustees and the majority has signified agreement within 28 days.</p>
+          </div>
+        </details>
+
+        <details class="reveal">
+          <summary>18. Delegation by charity trustees</summary>
+          <div class="clause-body">
+            <p>The charity trustees may delegate any of their powers or functions to a committee or committees. At least one member of each committee must be a charity trustee. The acts and proceedings of any committee must be brought to the attention of the charity trustees as a whole as soon as is reasonably practicable.</p>
+          </div>
+        </details>
+
+        <details class="reveal">
+          <summary>19. Meetings and proceedings of charity trustees</summary>
+          <div class="clause-body">
+            <p>The Deputy Colonel Commandant shall act as the chair. The quorum is two charity trustees, or the number nearest to one third of the total number of charity trustees, whichever is greater.</p>
+            <p>Meetings may be held by suitable electronic means in which each participant may communicate with all the other participants.</p>
+          </div>
+        </details>
+
+        <details class="reveal">
+          <summary>20–22. Saving provisions, execution of documents, electronic communications</summary>
+          <div class="clause-body">
+            <p>All decisions of the charity trustees shall be valid notwithstanding the participation of a disqualified, retired, or conflicted trustee, provided the decision was made by a majority at a quorate meeting without that trustee's vote.</p>
+            <p>A document is validly executed by signature of at least two charity trustees.</p>
+            <p>ICA will comply with the Communications Provisions in the General Regulations. Members who provide an email address are taken to have agreed to receive electronic communications unless they indicate otherwise.</p>
+          </div>
+        </details>
+
+        <details class="reveal">
+          <summary>23–26. Registers, minutes, accounting, rules</summary>
+          <div class="clause-body">
+            <p>ICA must comply with its obligations regarding the keeping of registers of members and charity trustees; must keep minutes of all appointments, proceedings, meetings, and decisions; must comply with the Charities Act 2011 regarding accounting records and annual reports (to be sent to the Commission within 10 months of year end); and the charity trustees may make reasonable rules or bye laws for the proper conduct and management of ICA.</p>
+          </div>
+        </details>
+
+        <details class="reveal">
+          <summary>27. Disputes</summary>
+          <div class="clause-body">
+            <p>If a dispute arises between members about the validity or propriety of anything done under this constitution, and the dispute cannot be resolved by agreement, the parties must first try in good faith to settle the dispute by mediation before resorting to litigation.</p>
+          </div>
+        </details>
+
+        <details class="reveal">
+          <summary>28. Amendment of constitution</summary>
+          <div class="clause-body">
+            <p>This constitution can only be amended by resolution agreed in writing by all members, or by a resolution passed by a 75% majority of votes cast at a general meeting.</p>
+            <p>Any alteration of clause 3 (Objects), clause 29 (Voluntary winding up or dissolution), this clause, or of any provision where the alteration would provide authorisation for any benefit to charity trustees or members, requires the prior written consent of the Charity Commission.</p>
+            <p>A copy of any amending resolution, together with the amended constitution, must be sent to the Commission within 15 days. The amendment does not take effect until recorded in the Register of Charities.</p>
+          </div>
+        </details>
+
+        <details class="reveal">
+          <summary>29. Voluntary winding up or dissolution</summary>
+          <div class="clause-body">
+            <p>ICA may be dissolved by resolution of its members, passed by a 75% majority at a general meeting (with not less than 14 days' notice) or by resolution agreed in writing by all members.</p>
+            <p>Subject to the payment of all debts, remaining assets must be applied for charitable purposes the same as or similar to those of ICA.</p>
+          </div>
+        </details>
+
+        <details class="reveal">
+          <summary>30. Interpretation</summary>
+          <div class="clause-body">
+            <p>"Connected person" includes children, parents, grandchildren, grandparents, brothers or sisters of the charity trustee; spouses or civil partners; business partners; institutions controlled by the trustee or connected persons; and bodies corporate in which they have a substantial interest.</p>
+            <p>"General Regulations" means the Charitable Incorporated Organisations (General) Regulations 2012. "Dissolution Regulations" means the Charitable Incorporated Organisations (Insolvency and Dissolution) Regulations 2012. "Charity trustee" means a charity trustee of ICA. A "poll" means a counted vote or ballot.</p>
+            <p>The "Corps Council" means the Corps Council of the Intelligence Corps as defined in Intelligence Corps Policy Documents as amended from time to time.</p>
+          </div>
+        </details>
+
+      </div>
+
+      <div class="page-content">
+        <p class="constitution-note reveal">This document is a digital reproduction of the Intelligence Corps Association Constitution dated 2017. For the definitive version, refer to the Charity Commission register or contact <a href="mailto:ica_hq@roseandlaurel.uk">ICA Headquarters</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section-mentoring">
+    <div class="container">
+      <div class="page-content" style="text-align: center;">
+        <div class="reveal">
+          <h2>Questions?</h2>
+          <p class="section-lead">If you'd like to know more about how The ROSE Network operates within the ICA framework, get in touch.</p>
+          <div class="hero-actions" style="margin-top: var(--space-md);">
+            <a href="/contact" class="btn btn-primary">Contact Us</a>
+            <a href="/" class="btn btn-secondary">Back to Home</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="/assets/rose-network-logo-portrait.png" alt="The ROSE Network" class="footer-logo">
+          <p class="footer-brand">The ROSE Network</p>
+          <p class="footer-brand-sub">Intelligence Corps Association</p>
+          <p>An exclusive professional network for the Intelligence Corps community. Every member adds value. Every connection compounds.</p>
+        </div>
+        <div class="footer-col">
+          <h4>The Network</h4>
+          <ul>
+            <li><a href="/transition">Transition</a></li>
+            <li><a href="/professional-network">Professional Network</a></li>
+            <li><a href="/enterprise">Enterprise</a></li>
+            <li><a href="/events">Events</a></li>
+            <li><a href="/#governance">Governance</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li>Headquarters ICA</li>
+            <li>Mrs Hazel Donald</li>
+            <li><a href="mailto:ica_hq@roseandlaurel.uk">ica_hq@roseandlaurel.uk</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="https://www.roseandlaurel.uk/" target="_blank" rel="noopener">Intelligence Corps Association</a></li>
+            <li><a href="https://www.veteransgateway.org.uk/" target="_blank" rel="noopener">Veterans Gateway</a></li>
+            <li><a href="https://www.ssafa.org.uk/" target="_blank" rel="noopener">SSAFA</a></li>
+            <li><a href="https://www.britishlegion.org.uk/" target="_blank" rel="noopener">Royal British Legion</a></li>
+            <li><a href="https://www.cobseo.org.uk/" target="_blank" rel="noopener">COBSEO</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; Intelligence Corps Association. All rights reserved.</p>
+        <p class="footer-charity">Registered Charity No. 1175211</p>
+        <p class="footer-legal"><a href="/privacy-policy">Privacy Policy</a> &middot; <a href="/cookie-policy">Cookie Policy</a> &middot; <a href="/terms-of-use">Terms of Use</a> &middot; <button id="cookie-settings" class="cookie-settings-link" type="button">Cookie Settings</button></p>
+        <p class="footer-credit">Website by <a href="https://hermesdigital.co.uk/" target="_blank" rel="noopener">Hermes Digital</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Cookie consent" aria-hidden="true">
+    <div class="cookie-banner-inner">
+      <p class="cookie-banner-text">We use cookies to analyse site usage and improve your experience. By accepting, you consent to our use of cookies in accordance with our <a href="/privacy-policy">Privacy Policy</a>.</p>
+      <div class="cookie-banner-actions">
+        <button id="cookie-reject" class="cookie-btn cookie-btn--reject" type="button">Reject</button>
+        <button id="cookie-accept" class="cookie-btn cookie-btn--accept" type="button">Accept</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Cookie consent management
+    (function() {
+      var banner = document.getElementById('cookie-banner');
+      var consent = null;
+      try { consent = localStorage.getItem('cookie_consent'); } catch (e) {}
+
+      if (consent === null) {
+        banner.setAttribute('aria-hidden', 'false');
+        banner.classList.add('is-visible');
+      }
+
+      document.getElementById('cookie-accept').addEventListener('click', function() {
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted',
+          'analytics_storage': 'granted',
+          'functionality_storage': 'granted',
+          'personalization_storage': 'granted'
+        });
+        try { localStorage.setItem('cookie_consent', 'granted'); } catch (e) {}
+        banner.classList.remove('is-visible');
+        banner.setAttribute('aria-hidden', 'true');
+      });
+
+      var settingsBtn = document.getElementById('cookie-settings');
+      if (settingsBtn) {
+        settingsBtn.addEventListener('click', function() {
+          banner.setAttribute('aria-hidden', 'false');
+          banner.classList.add('is-visible');
+        });
+      }
+
+      document.getElementById('cookie-reject').addEventListener('click', function() {
+        gtag('consent', 'update', {
+          'ad_storage': 'denied',
+          'ad_user_data': 'denied',
+          'ad_personalization': 'denied',
+          'analytics_storage': 'denied',
+          'functionality_storage': 'denied',
+          'personalization_storage': 'denied'
+        });
+        try { localStorage.setItem('cookie_consent', 'denied'); } catch (e) {}
+        banner.classList.remove('is-visible');
+        banner.setAttribute('aria-hidden', 'true');
+      });
+    })();
+  </script>
+
+  <script>
+    // Mobile navigation toggle
+    document.addEventListener('DOMContentLoaded', function () {
+      var toggle = document.querySelector('.nav-toggle');
+      var nav = document.querySelector('.site-nav');
+      if (toggle && nav) {
+        toggle.addEventListener('click', function () {
+          var expanded = toggle.getAttribute('aria-expanded') === 'true';
+          toggle.setAttribute('aria-expanded', String(!expanded));
+          nav.classList.toggle('is-open');
+        });
+        nav.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            nav.classList.remove('is-open');
+            toggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+    });
+  </script>
+
+  <script>
+    // Scroll-reveal animation with IntersectionObserver
+    (function() {
+      var reveals = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        reveals.forEach(function(el) { el.classList.add('is-visible'); });
+        return;
+      }
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      reveals.forEach(function(el) { observer.observe(el); });
+    })();
+  </script>
+
+  <!-- HubSpot — loaded only after consent is granted -->
+  <script>
+    (function() {
+      function loadHubSpot() {
+        if (document.getElementById('hs-script-loader')) return;
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.id = 'hs-script-loader';
+        s.async = true;
+        s.defer = true;
+        s.src = '//js-eu1.hs-scripts.com/148068634.js';
+        document.body.appendChild(s);
+      }
+
+      try {
+        if (localStorage.getItem('cookie_consent') === 'granted') {
+          loadHubSpot();
+        }
+      } catch (e) {}
+
+      var acceptBtn = document.getElementById('cookie-accept');
+      if (acceptBtn) {
+        acceptBtn.addEventListener('click', loadHubSpot);
+      }
+    })();
+  </script>
+
+</body>
+</html>
