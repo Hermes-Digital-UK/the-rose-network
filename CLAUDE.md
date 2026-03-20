@@ -54,6 +54,7 @@ Mrs Hazel Donald — Headquarters Intelligence Corps Association
 - `/about` — Chairman profile (Stephen James)
 - `/contact` — Contact form (HubSpot) + info sidebar
 - `/about/constitution` — Network constitution
+- `/404` — Custom 404 page (Sandhurst background, DE officer joke)
 - `/privacy-policy`, `/cookie-policy`, `/terms-of-use` — Legal pages
 
 ### Page anatomy (shared across all pages)
@@ -68,6 +69,7 @@ Mrs Hazel Donald — Headquarters Intelligence Corps Association
 - `assets/rose-network-logo-horizontal.png` — Header logo
 - `assets/rose-network-logo-portrait.png` — Footer logo
 - `assets/stephen-james-headshot.png` — Chairman headshot
+- `assets/sandhurst.jpg` — 404 page background (RMAS)
 - `assets/favicon.ico`
 - `output/email-signature.html` — HTML email signature template
 
