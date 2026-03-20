@@ -36,11 +36,40 @@ Forums provide Leavers the opportunity to meet Network community members in a re
 Mrs Hazel Donald — Headquarters Intelligence Corps Association
 
 ## Tech Stack
-- **Platform:** Microsoft 365 (ICA infrastructure)
-- **Website:** Next.js App Router on Vercel
+- **ICA Platform:** Microsoft 365 (ICA infrastructure)
+- **Website:** Static HTML/CSS/JS hosted on Vercel (no framework — vanilla)
+- **Styling:** Single stylesheet (`css/style.css`) using CSS custom properties; fonts: Spectral (headings) + Figtree (body) via Google Fonts
+- **Forms:** HubSpot embedded forms (portal 148068634, EU region)
+- **Analytics:** Google Tag Manager (GTM-WS8WK4Q9) with Consent Mode v2
 - **Git:** github.com/Hermes-Digital-UK/the-rose-network
 - **Vercel:** hermes-digital team, project: the-rose-network
 - **Managed by:** Hermes Digital UK (on behalf of ICA)
+
+## Site Structure
+- `/` — Homepage (three-pillar overview, governance, get involved)
+- `/transition` — Pillar 1: Transition support for Service Leavers
+- `/professional-network` — Pillar 2: The civilian professional network
+- `/enterprise` — Pillar 3: Enterprise engagement
+- `/events` — The Rose RV monthly networking + ROSE Forums
+- `/about` — Chairman profile (Stephen James)
+- `/contact` — Contact form (HubSpot) + info sidebar
+- `/about/constitution` — Network constitution
+- `/privacy-policy`, `/cookie-policy`, `/terms-of-use` — Legal pages
+
+### Page anatomy (shared across all pages)
+1. ICA affiliation bar (dark navy, top)
+2. Sticky header with logo + 7-item nav (Home, Transition, Network, Enterprise, Events, About, Contact)
+3. Hero section (full-width dark background with geometric patterns; `hero--compact` variant for inner pages)
+4. Main content sections
+5. Footer (4-column grid: brand, network links, contact, useful links)
+6. Cookie consent banner (fixed bottom, localStorage-backed)
+
+### Assets
+- `assets/rose-network-logo-horizontal.png` — Header logo
+- `assets/rose-network-logo-portrait.png` — Footer logo
+- `assets/stephen-james-headshot.png` — Chairman headshot
+- `assets/favicon.ico`
+- `output/email-signature.html` — HTML email signature template
 
 ## Constraints
 - No client/member data in personal or shared environments
