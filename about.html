@@ -6,6 +6,22 @@
   <title>About the Chairman — The ROSE Network</title>
   <meta name="description" content="Stephen James BA (Hons), QTS, FRSA — Chairman of The ROSE Network. Intelligence Corps veteran, entrepreneur, and advocate for the Corps family's professional development.">
   <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+  <link rel="canonical" href="https://rose.roseandlaurel.uk/about">
+  <meta name="theme-color" content="#0C1F2C">
+  <meta property="og:title" content="About the Chairman — The ROSE Network">
+  <meta property="og:description" content="Stephen James BA (Hons), QTS, FRSA — Chairman of The ROSE Network. Intelligence Corps veteran, entrepreneur, and advocate for the Corps family.">
+  <meta property="og:url" content="https://rose.roseandlaurel.uk/about">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:site_name" content="The ROSE Network">
+  <meta property="og:image" content="https://rose.roseandlaurel.uk/assets/rose-network-logo-portrait.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="About the Chairman — The ROSE Network">
+  <meta name="twitter:description" content="Stephen James BA (Hons), QTS, FRSA — Chairman of The ROSE Network. Intelligence Corps veteran, entrepreneur, and advocate for the Corps family.">
+  <meta name="twitter:image" content="https://rose.roseandlaurel.uk/assets/rose-network-logo-portrait.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 
   <!-- Google Consent Mode v2 — must fire before GTM -->
@@ -55,27 +71,39 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "AboutPage",
-    "name": "About the Chairman — The ROSE Network",
-    "description": "Stephen James — Chairman of The ROSE Network, Intelligence Corps Association",
-    "mainEntity": {
-      "@type": "Person",
-      "name": "Stephen James",
-      "jobTitle": "Chairman, ICA ROSE Network",
-      "honorificSuffix": "BA (Hons), QTS, FRSA",
-      "affiliation": {
-        "@type": "Organization",
-        "name": "ICA Resettlement & Support for Employment 'Rose' Network"
+    "@graph": [
+      {
+        "@type": "AboutPage",
+        "@id": "https://rose.roseandlaurel.uk/about",
+        "url": "https://rose.roseandlaurel.uk/about",
+        "name": "About the Chairman — The ROSE Network",
+        "isPartOf": { "@id": "https://rose.roseandlaurel.uk/#website" },
+        "inLanguage": "en-GB",
+        "mainEntity": {
+          "@type": "Person",
+          "@id": "https://rose.roseandlaurel.uk/#chairman",
+          "name": "Stephen James",
+          "jobTitle": "Chairman, ICA ROSE Network",
+          "honorificSuffix": "BA (Hons), QTS, FRSA",
+          "description": "Intelligence Corps veteran, entrepreneur, and Fellow of the Royal Society of Arts. Chairman of The ROSE Network and Founder of British Veteran Owned.",
+          "image": "https://rose.roseandlaurel.uk/assets/stephen-james-headshot.png",
+          "affiliation": [
+            { "@type": "Organization", "@id": "https://rose.roseandlaurel.uk/#organization" },
+            { "@type": "Organization", "name": "British Veteran Owned", "url": "https://www.britishveteranowned.co.uk/" },
+            { "@type": "Organization", "name": "Hermes Digital UK", "url": "https://hermesdigital.co.uk/" }
+          ],
+          "alumniOf": { "@type": "Organization", "name": "Intelligence Corps, British Army" },
+          "sameAs": ["https://www.linkedin.com/in/stephenjamesgbr/"]
+        }
       },
-      "alumniOf": {
-        "@type": "Organization",
-        "name": "Intelligence Corps, British Army"
-      },
-      "url": "https://www.stephenjamesgbr.co.uk",
-      "sameAs": [
-        "https://www.linkedin.com/in/stephenjamesgbr/"
-      ]
-    }
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rose.roseandlaurel.uk/" },
+          { "@type": "ListItem", "position": 2, "name": "About", "item": "https://rose.roseandlaurel.uk/about" }
+        ]
+      }
+    ]
   }
   </script>
 </head>
@@ -231,7 +259,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <img src="assets/rose-network-logo-portrait.png" alt="The ROSE Network" class="footer-logo">
+          <img src="assets/rose-network-logo-portrait.png" alt="The ROSE Network" class="footer-logo" loading="lazy">
           <p class="footer-brand">The ROSE Network</p>
           <p class="footer-brand-sub">Intelligence Corps Association</p>
           <p>An exclusive professional network for the Intelligence Corps community. Every member adds value. Every connection compounds.</p>

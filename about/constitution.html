@@ -6,6 +6,22 @@
   <title>Constitution — The ROSE Network</title>
   <meta name="description" content="The Intelligence Corps Association Constitution — the charitable framework under which The ROSE Network operates. Registered Charity No. 1175211.">
   <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+  <link rel="canonical" href="https://rose.roseandlaurel.uk/about/constitution">
+  <meta name="theme-color" content="#0C1F2C">
+  <meta property="og:title" content="Constitution — The ROSE Network">
+  <meta property="og:description" content="The Intelligence Corps Association Constitution — the charitable framework under which The ROSE Network operates. Registered Charity No. 1175211.">
+  <meta property="og:url" content="https://rose.roseandlaurel.uk/about/constitution">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:site_name" content="The ROSE Network">
+  <meta property="og:image" content="https://rose.roseandlaurel.uk/assets/rose-network-logo-portrait.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Constitution — The ROSE Network">
+  <meta name="twitter:description" content="The Intelligence Corps Association Constitution — the charitable framework under which The ROSE Network operates. Registered Charity No. 1175211.">
+  <meta name="twitter:image" content="https://rose.roseandlaurel.uk/assets/rose-network-logo-portrait.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
 
   <!-- Google Consent Mode v2 — must fire before GTM -->
@@ -55,18 +71,25 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "ICA Constitution",
-    "description": "The Intelligence Corps Association Constitution — the charitable framework under which The ROSE Network operates.",
-    "isPartOf": {
-      "@type": "WebSite",
-      "@id": "https://rose.roseandlaurel.uk/#website"
-    },
-    "about": {
-      "@type": "Organization",
-      "@id": "https://rose.roseandlaurel.uk/#organization",
-      "name": "ICA Resettlement & Support for Employment 'Rose' Network"
-    }
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://rose.roseandlaurel.uk/about/constitution",
+        "url": "https://rose.roseandlaurel.uk/about/constitution",
+        "name": "ICA Constitution — The ROSE Network",
+        "isPartOf": { "@id": "https://rose.roseandlaurel.uk/#website" },
+        "about": { "@id": "https://rose.roseandlaurel.uk/#organization" },
+        "inLanguage": "en-GB"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rose.roseandlaurel.uk/" },
+          { "@type": "ListItem", "position": 2, "name": "About", "item": "https://rose.roseandlaurel.uk/about" },
+          { "@type": "ListItem", "position": 3, "name": "Constitution", "item": "https://rose.roseandlaurel.uk/about/constitution" }
+        ]
+      }
+    ]
   }
   </script>
 
@@ -624,7 +647,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <img src="/assets/rose-network-logo-portrait.png" alt="The ROSE Network" class="footer-logo">
+          <img src="/assets/rose-network-logo-portrait.png" alt="The ROSE Network" class="footer-logo" loading="lazy">
           <p class="footer-brand">The ROSE Network</p>
           <p class="footer-brand-sub">Intelligence Corps Association</p>
           <p>An exclusive professional network for the Intelligence Corps community. Every member adds value. Every connection compounds.</p>

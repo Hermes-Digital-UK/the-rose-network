@@ -78,12 +78,13 @@
         "name": "ICA ROSE Network",
         "alternateName": "The ROSE Network",
         "url": "https://rose.roseandlaurel.uk",
+        "logo": "https://rose.roseandlaurel.uk/assets/rose-network-logo-portrait.png",
+        "image": "https://rose.roseandlaurel.uk/assets/rose-network-logo-portrait.png",
         "description": "An exclusive professional network for the Intelligence Corps community — supporting transition, enabling professional connection, and creating opportunity through enterprise.",
         "parentOrganization": {
           "@type": "Organization",
           "name": "Intelligence Corps Association",
           "url": "https://www.roseandlaurel.uk/",
-          "nonprofitStatus": "UK:RegisteredCharity",
           "identifier": {
             "@type": "PropertyValue",
             "name": "Charity Commission Registration",
@@ -93,7 +94,8 @@
         "contactPoint": {
           "@type": "ContactPoint",
           "contactType": "Headquarters",
-          "email": "ica_hq@roseandlaurel.uk"
+          "email": "ica_hq@roseandlaurel.uk",
+          "availableLanguage": "English"
         }
       },
       {
@@ -101,9 +103,22 @@
         "@id": "https://rose.roseandlaurel.uk/#website",
         "url": "https://rose.roseandlaurel.uk",
         "name": "The ROSE Network",
-        "publisher": {
-          "@id": "https://rose.roseandlaurel.uk/#organization"
-        }
+        "description": "An exclusive professional network for the Intelligence Corps community.",
+        "publisher": { "@id": "https://rose.roseandlaurel.uk/#organization" },
+        "inLanguage": "en-GB"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://rose.roseandlaurel.uk/",
+        "url": "https://rose.roseandlaurel.uk/",
+        "name": "The ROSE Network — Intelligence Corps Association",
+        "isPartOf": { "@id": "https://rose.roseandlaurel.uk/#website" },
+        "about": { "@id": "https://rose.roseandlaurel.uk/#organization" },
+        "inLanguage": "en-GB"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rose.roseandlaurel.uk/" }]
       }
     ]
   }
@@ -527,7 +542,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <img src="assets/rose-network-logo-portrait.png" alt="The ROSE Network" class="footer-logo">
+          <img src="assets/rose-network-logo-portrait.png" alt="The ROSE Network" class="footer-logo" loading="lazy">
           <p class="footer-brand">The ROSE Network</p>
           <p class="footer-brand-sub">Intelligence Corps Association</p>
           <p>An exclusive professional network for the Intelligence Corps community. Every member adds value. Every connection compounds.</p>
