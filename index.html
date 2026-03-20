@@ -7,6 +7,41 @@
   <meta name="description" content="The ROSE Network is a trusted professional network for the Intelligence Corps community. Supporting transition, enabling connection, and sustaining a lifelong professional network for serving personnel, veterans, and the Corps family.">
   <link rel="stylesheet" href="css/style.css">
 
+  <!-- Google Consent Mode v2 — must fire before GTM -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'functionality_storage': 'denied',
+      'personalization_storage': 'denied',
+      'security_storage': 'granted',
+      'wait_for_update': 500
+    });
+    gtag('set', 'ads_data_redaction', true);
+    gtag('set', 'url_passthrough', true);
+
+    // Restore consent if previously granted
+    (function() {
+      try {
+        var consent = localStorage.getItem('cookie_consent');
+        if (consent === 'granted') {
+          gtag('consent', 'update', {
+            'ad_storage': 'granted',
+            'ad_user_data': 'granted',
+            'ad_personalization': 'granted',
+            'analytics_storage': 'granted',
+            'functionality_storage': 'granted',
+            'personalization_storage': 'granted'
+          });
+        }
+      } catch (e) {}
+    })();
+  </script>
+
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -149,7 +184,9 @@
   <!-- Top Navigation -->
   <header class="site-header">
     <div class="container">
-      <a href="/" class="site-logo">ROSE Network</a>
+      <a href="/" class="site-logo">
+        <img src="assets/rose-network-logo-horizontal.png" alt="The ROSE Network — Intelligence Corps Association" class="site-logo-img">
+      </a>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span>
         <span></span>
@@ -462,9 +499,71 @@
       <div class="footer-bottom">
         <p>&copy; Intelligence Corps Association. All rights reserved.</p>
         <p class="footer-charity">Registered Charity No. 1175211</p>
+        <p class="footer-legal"><a href="https://www.roseandlaurel.uk/Governance-Policy/Privacy-Notice" target="_blank" rel="noopener">Privacy Notice</a> · <button id="cookie-settings" class="cookie-settings-link" type="button">Cookie Settings</button></p>
       </div>
     </div>
   </footer>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Cookie consent" aria-hidden="true">
+    <div class="cookie-banner-inner">
+      <p class="cookie-banner-text">We use cookies to analyse site usage and improve your experience. By accepting, you consent to our use of cookies in accordance with our <a href="https://www.roseandlaurel.uk/Governance-Policy/Privacy-Notice" target="_blank" rel="noopener">Privacy Notice</a>.</p>
+      <div class="cookie-banner-actions">
+        <button id="cookie-reject" class="cookie-btn cookie-btn--reject" type="button">Reject</button>
+        <button id="cookie-accept" class="cookie-btn cookie-btn--accept" type="button">Accept</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Cookie consent management
+    (function() {
+      var banner = document.getElementById('cookie-banner');
+      var consent = null;
+      try { consent = localStorage.getItem('cookie_consent'); } catch (e) {}
+
+      if (consent === null) {
+        banner.setAttribute('aria-hidden', 'false');
+        banner.classList.add('is-visible');
+      }
+
+      document.getElementById('cookie-accept').addEventListener('click', function() {
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted',
+          'analytics_storage': 'granted',
+          'functionality_storage': 'granted',
+          'personalization_storage': 'granted'
+        });
+        try { localStorage.setItem('cookie_consent', 'granted'); } catch (e) {}
+        banner.classList.remove('is-visible');
+        banner.setAttribute('aria-hidden', 'true');
+      });
+
+      var settingsBtn = document.getElementById('cookie-settings');
+      if (settingsBtn) {
+        settingsBtn.addEventListener('click', function() {
+          banner.setAttribute('aria-hidden', 'false');
+          banner.classList.add('is-visible');
+        });
+      }
+
+      document.getElementById('cookie-reject').addEventListener('click', function() {
+        gtag('consent', 'update', {
+          'ad_storage': 'denied',
+          'ad_user_data': 'denied',
+          'ad_personalization': 'denied',
+          'analytics_storage': 'denied',
+          'functionality_storage': 'denied',
+          'personalization_storage': 'denied'
+        });
+        try { localStorage.setItem('cookie_consent', 'denied'); } catch (e) {}
+        banner.classList.remove('is-visible');
+        banner.setAttribute('aria-hidden', 'true');
+      });
+    })();
+  </script>
 
   <script>
     // Mobile navigation toggle
@@ -487,6 +586,10 @@
       }
     });
   </script>
+
+  <!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/148068634.js"></script>
+  <!-- End of HubSpot Embed Code -->
 
 </body>
 </html>
