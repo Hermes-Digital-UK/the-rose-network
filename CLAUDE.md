@@ -52,6 +52,7 @@ Mrs Hazel Donald — Headquarters Intelligence Corps Association
 - `/enterprise` — Pillar 3: Enterprise engagement
 - `/events` — The Rose RV monthly networking + ROSE Forums
 - `/about` — Chairman profile (Stephen James)
+- `/insights` — Insights articles hub (transition, careers, enterprise, community)
 - `/contact` — Contact form (HubSpot) + info sidebar
 - `/about/constitution` — Network constitution
 - `/brand-guidelines` — Visual identity and component reference (noindex, team resource)
@@ -60,7 +61,7 @@ Mrs Hazel Donald — Headquarters Intelligence Corps Association
 
 ### Page anatomy (shared across all pages)
 1. ICA affiliation bar (dark navy, top)
-2. Sticky header with logo + 7-item nav (Home, Transition, Network, Enterprise, Events, About, Contact)
+2. Sticky header with logo + 8-item nav (Home, Transition, Network, Enterprise, Events, Insights, About, Contact)
 3. Hero section (full-width dark background with geometric patterns; `hero--compact` variant for inner pages)
 4. Main content sections
 5. Footer (4-column grid: brand, network links, contact, useful links)
