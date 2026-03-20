@@ -834,6 +834,13 @@ h2 {
   gap: var(--space-lg);
 }
 
+.footer-logo {
+  width: 72px;
+  height: 72px;
+  margin-bottom: var(--space-sm);
+  border-radius: var(--radius);
+}
+
 .footer-brand {
   font-family: var(--font-heading);
   font-size: 1.15rem;
@@ -1147,6 +1154,20 @@ h2 {
 }
 
 .footer-legal a:hover {
+  color: var(--color-accent);
+}
+
+.footer-credit {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.footer-credit a {
+  color: rgba(255, 255, 255, 0.5);
+  transition: color var(--transition);
+}
+
+.footer-credit a:hover {
   color: var(--color-accent);
 }
 
