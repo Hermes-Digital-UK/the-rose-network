@@ -546,10 +546,10 @@ h2 {
   height: 100%;
 }
 
-/* --- Two-Pillar Model --- */
+/* --- Three-Pillar Model --- */
 .pillar-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-md);
   margin-top: var(--space-md);
 }
@@ -596,9 +596,99 @@ h2 {
   color: var(--color-primary);
 }
 
-.pillar-label--veteran {
+.pillar-label--network {
   background-color: var(--color-sage-light);
   color: var(--color-sage);
+}
+
+.pillar-label--enterprise {
+  background-color: var(--color-accent-light);
+  color: #8B6914;
+}
+
+/* --- Pillar Card Links --- */
+.pillar-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.pillar-card-link:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.pillar-card-link .pillar-card {
+  height: 100%;
+}
+
+.pillar-card-link:hover .pillar-card {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+  border-color: var(--color-accent);
+}
+
+.pillar-cta {
+  display: inline-block;
+  margin-top: var(--space-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  transition: color var(--transition);
+}
+
+.pillar-card-link:hover .pillar-cta {
+  color: var(--color-accent);
+}
+
+/* --- Enterprise Icon Variant --- */
+.principle-icon--enterprise {
+  color: #8B6914;
+  background: var(--color-accent-light);
+}
+
+.principle-card:hover .principle-icon--enterprise {
+  background: var(--color-accent);
+  color: #ffffff;
+}
+
+/* --- Hero Pillar Label --- */
+.hero-pillar-label {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-accent);
+  margin-bottom: var(--space-sm);
+  animation: heroFadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* --- Page Content --- */
+.page-content {
+  max-width: 780px;
+}
+
+.page-content p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.page-content p + p {
+  margin-top: var(--space-sm);
+}
+
+.page-content a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color var(--transition);
+}
+
+.page-content a:hover {
+  color: var(--color-accent);
 }
 
 /* --- Sectors --- */
@@ -751,7 +841,7 @@ h2 {
 /* --- Pathway Grid (Get Involved) --- */
 .pathway-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-md);
   margin-top: var(--space-md);
 }
@@ -938,6 +1028,14 @@ h2 {
     display: none;
   }
 
+  .pillar-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pathway-grid {
+    grid-template-columns: 1fr;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr 1fr;
     gap: var(--space-md);
@@ -1013,6 +1111,10 @@ h2 {
   .pillar-grid,
   .pathway-grid {
     grid-template-columns: 1fr;
+  }
+
+  .pillar-card-link .pillar-card {
+    height: auto;
   }
 
   .hero-actions {
