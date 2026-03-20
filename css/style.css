@@ -18,6 +18,7 @@
   --color-primary: #1b3a4b;
   --color-primary-dark: #0f2633;
   --color-accent: #4a6f5c;
+  --color-ica-red: #b82e35;
   --color-border: #d5d5d0;
   --color-border-light: #e8e8e4;
   --color-highlight: #f0efe8;
@@ -130,6 +131,44 @@ h3 {
   color: #ffffff;
 }
 
+/* --- ICA Affiliation Bar --- */
+.ica-bar {
+  background-color: var(--color-primary-dark);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  border-bottom: 2px solid var(--color-ica-red);
+}
+
+.ica-bar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 32px;
+}
+
+.ica-bar a {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.75rem;
+  transition: color 0.2s;
+}
+
+.ica-bar a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.ica-bar-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ica-bar-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
 /* --- Header --- */
 .site-header {
   background-color: var(--color-surface);
@@ -221,7 +260,15 @@ h3 {
   font-size: 1rem;
   opacity: 0.75;
   max-width: 600px;
+  margin: 0 auto var(--space-md);
+}
+
+.hero-framing {
+  font-size: 0.95rem;
+  opacity: 0.65;
+  max-width: 680px;
   margin: 0 auto var(--space-lg);
+  line-height: 1.8;
 }
 
 .hero-actions {
@@ -280,24 +327,53 @@ h3 {
 }
 
 /* Alternating section backgrounds */
-.section-serves,
-.section-community,
 .section-mentoring,
-.section-involved {
+.section-events,
+.section-involved,
+.section-development {
   background-color: var(--color-highlight);
 }
 
-/* --- Section 1: About / Principles --- */
+/* --- Subsection headings --- */
+.subsection-heading {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: var(--color-primary-dark);
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
+}
+
+/* --- Subsection spacing --- */
+.subsection {
+  margin-top: var(--space-lg);
+}
+
+.subsection:first-child {
+  margin-top: 0;
+}
+
+/* --- Core Functions / Principles Grid --- */
 .principles-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-md);
-  margin-top: var(--space-lg);
+  margin-top: var(--space-md);
+}
+
+.principles-grid--four {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .principle-card {
   text-align: center;
   padding: var(--space-md) var(--space-sm);
+}
+
+.principle-card p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin-top: var(--space-xs);
 }
 
 .principle-icon {
@@ -312,31 +388,71 @@ h3 {
   height: 100%;
 }
 
-/* --- Section 2: Who We Serve --- */
-.serves-grid {
+/* --- Two-Pillar Model --- */
+.pillar-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--space-md);
   margin-top: var(--space-md);
 }
 
-.serves-card {
+.pillar-card {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border-light);
+  border-left: 4px solid var(--color-primary);
   border-radius: 4px;
   padding: var(--space-md);
 }
 
-.serves-card h3 {
+.pillar-card h3 {
   margin-bottom: var(--space-xs);
 }
 
-.serves-card p {
+.pillar-card p {
   color: var(--color-text-muted);
   font-size: 0.95rem;
 }
 
-/* --- Section 3: How It Works --- */
+.pillar-label {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2px;
+  margin-bottom: var(--space-sm);
+}
+
+.pillar-label--transition {
+  background-color: rgba(27, 58, 75, 0.1);
+  color: var(--color-primary);
+}
+
+.pillar-label--veteran {
+  background-color: rgba(74, 111, 92, 0.1);
+  color: var(--color-accent);
+}
+
+/* --- Sectors --- */
+.sectors-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: var(--space-md);
+}
+
+.sector-tag {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.9rem;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
+  color: var(--color-text);
+}
+
+/* --- Steps Grid (How It Works / Development) --- */
 .steps-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -372,35 +488,7 @@ h3 {
   font-size: 0.95rem;
 }
 
-/* --- Section 4: Professional Community / Sectors --- */
-.sectors-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: var(--space-md);
-}
-
-.sector-tag {
-  display: inline-block;
-  padding: 0.5rem 1.25rem;
-  font-size: 0.9rem;
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: 3px;
-  color: var(--color-text);
-}
-
-/* --- Section 5: Opportunities --- */
-.disclaimer {
-  margin-top: var(--space-md);
-  font-size: 0.85rem;
-  color: var(--color-text-muted);
-  font-style: italic;
-  border-left: 3px solid var(--color-border);
-  padding-left: var(--space-sm);
-}
-
-/* --- Section 7: Forums / Locations --- */
+/* --- Locations Grid (Events) --- */
 .locations-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -411,6 +499,7 @@ h3 {
 .location-card {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border-light);
+  border-top: 2px solid var(--color-ica-red);
   border-radius: 4px;
   padding: var(--space-md);
   text-align: center;
@@ -421,74 +510,123 @@ h3 {
   font-weight: 400;
 }
 
-/* --- Section 8: Get Involved --- */
-.involved-grid {
+/* --- Opportunities --- */
+.disclaimer {
+  margin-top: var(--space-md);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+  border-left: 3px solid var(--color-border);
+  padding-left: var(--space-sm);
+}
+
+/* --- Pathway Grid (Get Involved) --- */
+.pathway-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--space-md);
   margin-top: var(--space-md);
 }
 
-.involved-card {
+.pathway-card {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border-light);
+  border-top: 2px solid var(--color-ica-red);
   border-radius: 4px;
   padding: var(--space-lg) var(--space-md);
-  text-align: center;
 }
 
-.involved-card h3 {
+.pathway-card h3 {
   margin-bottom: var(--space-xs);
 }
 
-.involved-card p {
+.pathway-card p {
   color: var(--color-text-muted);
   font-size: 0.95rem;
-  margin-bottom: var(--space-md);
 }
 
-/* --- Section 9: Contact --- */
-.section-contact {
-  text-align: center;
-  background-color: var(--color-primary-dark);
-  color: #ffffff;
+/* --- Governance --- */
+.section-governance {
+  background-color: var(--color-surface);
 }
 
-.section-contact h2 {
-  color: #ffffff;
-}
-
-.contact-details {
-  margin-top: var(--space-md);
-  line-height: 1.9;
-}
-
-.contact-org {
-  font-family: var(--font-heading);
-  font-size: 1.15rem;
-}
-
-.contact-label {
-  font-weight: 600;
-  margin-bottom: var(--space-xs);
-}
-
-.contact-details a {
-  color: rgba(255, 255, 255, 0.8);
-  text-decoration: underline;
-}
-
-.contact-details a:hover {
-  color: #ffffff;
+.section-governance p {
+  max-width: 720px;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
 }
 
 /* --- Footer --- */
 .site-footer {
-  padding: var(--space-md) 0;
-  text-align: center;
+  background-color: var(--color-primary-dark);
+  color: rgba(255, 255, 255, 0.75);
+  padding: var(--space-xl) 0 0;
+  font-size: 0.85rem;
+  border-top: 3px solid var(--color-ica-red);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: var(--space-lg);
+}
+
+.footer-brand {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin-bottom: var(--space-sm);
+}
+
+.footer-brand-sub {
   font-size: 0.8rem;
-  color: var(--color-text-muted);
-  border-top: 1px solid var(--color-border);
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: var(--space-sm);
+}
+
+.footer-col h4 {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: var(--space-sm);
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col li {
+  margin-bottom: 0.4rem;
+}
+
+.footer-col a {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+
+.footer-col a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  margin-top: var(--space-lg);
+  padding: var(--space-sm) 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.footer-charity {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
 }
 
 /* ============================================================
@@ -497,14 +635,18 @@ h3 {
 
 @media (max-width: 900px) {
   .principles-grid,
-  .serves-grid,
+  .principles-grid--four,
   .locations-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .steps-grid,
-  .involved-grid {
+  .steps-grid {
     grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
   }
 
   h1 {
@@ -555,8 +697,13 @@ h3 {
   }
 
   .principles-grid,
-  .serves-grid,
+  .principles-grid--four,
   .locations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pillar-grid,
+  .pathway-grid {
     grid-template-columns: 1fr;
   }
 
@@ -568,5 +715,19 @@ h3 {
   .section-actions {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .ica-bar-links {
+    display: none;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
   }
 }
