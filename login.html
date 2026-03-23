@@ -3,22 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact — The ROSE Network</title>
-  <meta name="description" content="Get in touch with The ROSE Network. Whether you're a serving member preparing for transition, a veteran looking to contribute, or an employer wanting to connect, we'd like to hear from you.">
+  <title>Login — The ROSE Network</title>
+  <meta name="description" content="Sign in to your ROSE Network member account.">
   <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
-  <link rel="canonical" href="https://rose.roseandlaurel.uk/contact">
+  <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#0C1F2C">
-  <meta property="og:title" content="Contact — The ROSE Network">
-  <meta property="og:description" content="Get in touch with The ROSE Network. Whether you're preparing for transition, looking to contribute, or wanting to connect with the Intelligence Corps community.">
-  <meta property="og:url" content="https://rose.roseandlaurel.uk/contact">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="en_GB">
-  <meta property="og:site_name" content="The ROSE Network">
-  <meta property="og:image" content="https://rose.roseandlaurel.uk/assets/rose-network-logo-portrait.png">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Contact — The ROSE Network">
-  <meta name="twitter:description" content="Get in touch with The ROSE Network. Whether you're preparing for transition, looking to contribute, or wanting to connect with the Intelligence Corps community.">
-  <meta name="twitter:image" content="https://rose.roseandlaurel.uk/assets/rose-network-logo-portrait.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -40,20 +29,11 @@
     });
     gtag('set', 'ads_data_redaction', true);
     gtag('set', 'url_passthrough', true);
-
-    // Restore consent if previously granted
     (function() {
       try {
         var consent = localStorage.getItem('cookie_consent');
         if (consent === 'granted') {
-          gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted',
-            'analytics_storage': 'granted',
-            'functionality_storage': 'granted',
-            'personalization_storage': 'granted'
-          });
+          gtag('consent', 'update', { 'ad_storage': 'granted', 'ad_user_data': 'granted', 'ad_personalization': 'granted', 'analytics_storage': 'granted', 'functionality_storage': 'granted', 'personalization_storage': 'granted' });
         }
       } catch (e) {}
     })();
@@ -65,47 +45,11 @@
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-WS8WK4Q9');</script>
-  <!-- End Google Tag Manager -->
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "ContactPage",
-        "@id": "https://rose.roseandlaurel.uk/contact",
-        "url": "https://rose.roseandlaurel.uk/contact",
-        "name": "Contact — The ROSE Network",
-        "isPartOf": { "@id": "https://rose.roseandlaurel.uk/#website" },
-        "inLanguage": "en-GB",
-        "mainEntity": {
-          "@type": "Organization",
-          "@id": "https://rose.roseandlaurel.uk/#organization",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "Headquarters",
-            "email": "ica_hq@roseandlaurel.uk",
-            "availableLanguage": "English"
-          }
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rose.roseandlaurel.uk/" },
-          { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://rose.roseandlaurel.uk/contact" }
-        ]
-      }
-    ]
-  }
-  </script>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WS8WK4Q9"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   <!-- ICA Affiliation Bar -->
   <div class="ica-bar">
@@ -139,68 +83,39 @@
           <li><a href="/events">Events</a></li>
           <li><a href="/insights">Insights</a></li>
           <li><a href="/get-involved" class="nav-cta">Get Involved</a></li>
-          <li><a href="/contact" class="active nav-cta">Contact</a></li>
+          <li><a href="/contact" class="nav-cta">Contact</a></li>
         </ul>
         <ul class="nav-auth-links"></ul>
       </nav>
     </div>
   </header>
 
-  <!-- Contact Hero -->
+  <!-- Hero -->
   <section class="hero" style="padding-bottom: var(--space-lg);">
     <div class="container">
-      <h1>Contact Us</h1>
-      <p class="hero-subtitle">We'd like to hear from you.</p>
-      <p class="hero-description">Whether you're a serving member preparing for transition, a veteran looking to contribute, or an employer wanting to connect with the Intelligence Corps community.</p>
+      <h1>Sign In</h1>
+      <p class="hero-subtitle">Access your member area</p>
     </div>
   </section>
 
-  <!-- Contact Form Section -->
+  <!-- Login Form -->
   <section class="section section-about">
     <div class="container">
-      <div class="contact-layout">
-        <div class="contact-form-wrapper reveal">
-          <h2>Send Us a Message</h2>
-          <p class="section-lead">Complete the form below and we'll be in touch.</p>
-          <div class="contact-form-container">
-            <script src="https://js-eu1.hsforms.net/forms/embed/148068634.js" defer></script>
-            <div class="hs-form-frame" data-region="eu1" data-form-id="e543d74f-4dc8-45cb-8920-81ac5882c8ce" data-portal-id="148068634"></div>
-          </div>
-        </div>
-        <div class="contact-aside reveal reveal-delay-2">
-          <div class="contact-info-card">
-            <h3>Other Ways to Reach Us</h3>
-            <div class="contact-info-item">
-              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="contact-icon">
-                <rect x="6" y="12" width="36" height="24" rx="3" stroke="currentColor" stroke-width="2"/>
-                <path d="M6 15l18 12 18-12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <div>
-                <p class="contact-info-label">Email</p>
-                <a href="mailto:ica_hq@roseandlaurel.uk">ica_hq@roseandlaurel.uk</a>
-              </div>
+      <div class="auth-layout">
+        <div class="auth-card reveal">
+          <form id="login-form" class="auth-form" novalidate>
+            <div class="form-group">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" id="email" name="email" class="form-input" required autocomplete="email" placeholder="e.g. james@example.com">
             </div>
-            <div class="contact-info-item">
-              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="contact-icon">
-                <path d="M24 8c-4 0-8 3-8 8s4 8 8 8 8-3 8-8-4-8-8-8z" stroke="currentColor" stroke-width="2"/>
-                <path d="M12 38c0-6 5-10 12-10s12 4 12 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-              <div>
-                <p class="contact-info-label">Point of Contact</p>
-                <p>Mrs Hazel Donald</p>
-                <p class="text-muted">Headquarters ICA</p>
-              </div>
+            <div class="form-group">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" id="password" name="password" class="form-input" required autocomplete="current-password">
             </div>
-          </div>
-          <div class="contact-info-card">
-            <h3>Quick Links</h3>
-            <ul class="contact-quick-links">
-              <li><a href="/#involve">Get Involved</a></li>
-              <li><a href="/transition">Mentoring &amp; Transition</a></li>
-              <li><a href="/events">Events</a></li>
-              <li><a href="https://www.roseandlaurel.uk/Members/Apply-for-Membership" target="_blank" rel="noopener">ICA Membership</a></li>
-            </ul>
-          </div>
+            <div id="login-error" class="form-error" hidden></div>
+            <button type="submit" class="btn btn-primary auth-submit" id="login-btn">Sign In</button>
+          </form>
+          <p class="auth-alt">Don't have an account? <a href="/register">Register here</a></p>
         </div>
       </div>
     </div>
@@ -269,57 +184,27 @@
   </div>
 
   <script>
-    // Cookie consent management
     (function() {
       var banner = document.getElementById('cookie-banner');
       var consent = null;
       try { consent = localStorage.getItem('cookie_consent'); } catch (e) {}
-
-      if (consent === null) {
-        banner.setAttribute('aria-hidden', 'false');
-        banner.classList.add('is-visible');
-      }
-
+      if (consent === null) { banner.setAttribute('aria-hidden', 'false'); banner.classList.add('is-visible'); }
       document.getElementById('cookie-accept').addEventListener('click', function() {
-        gtag('consent', 'update', {
-          'ad_storage': 'granted',
-          'ad_user_data': 'granted',
-          'ad_personalization': 'granted',
-          'analytics_storage': 'granted',
-          'functionality_storage': 'granted',
-          'personalization_storage': 'granted'
-        });
+        gtag('consent', 'update', { 'ad_storage': 'granted', 'ad_user_data': 'granted', 'ad_personalization': 'granted', 'analytics_storage': 'granted', 'functionality_storage': 'granted', 'personalization_storage': 'granted' });
         try { localStorage.setItem('cookie_consent', 'granted'); } catch (e) {}
-        banner.classList.remove('is-visible');
-        banner.setAttribute('aria-hidden', 'true');
+        banner.classList.remove('is-visible'); banner.setAttribute('aria-hidden', 'true');
       });
-
       var settingsBtn = document.getElementById('cookie-settings');
-      if (settingsBtn) {
-        settingsBtn.addEventListener('click', function() {
-          banner.setAttribute('aria-hidden', 'false');
-          banner.classList.add('is-visible');
-        });
-      }
-
+      if (settingsBtn) { settingsBtn.addEventListener('click', function() { banner.setAttribute('aria-hidden', 'false'); banner.classList.add('is-visible'); }); }
       document.getElementById('cookie-reject').addEventListener('click', function() {
-        gtag('consent', 'update', {
-          'ad_storage': 'denied',
-          'ad_user_data': 'denied',
-          'ad_personalization': 'denied',
-          'analytics_storage': 'denied',
-          'functionality_storage': 'denied',
-          'personalization_storage': 'denied'
-        });
+        gtag('consent', 'update', { 'ad_storage': 'denied', 'ad_user_data': 'denied', 'ad_personalization': 'denied', 'analytics_storage': 'denied', 'functionality_storage': 'denied', 'personalization_storage': 'denied' });
         try { localStorage.setItem('cookie_consent', 'denied'); } catch (e) {}
-        banner.classList.remove('is-visible');
-        banner.setAttribute('aria-hidden', 'true');
+        banner.classList.remove('is-visible'); banner.setAttribute('aria-hidden', 'true');
       });
     })();
   </script>
 
   <script>
-    // Mobile navigation toggle
     document.addEventListener('DOMContentLoaded', function () {
       var toggle = document.querySelector('.nav-toggle');
       var nav = document.querySelector('.site-nav');
@@ -330,66 +215,80 @@
           nav.classList.toggle('is-open');
         });
         nav.querySelectorAll('a').forEach(function (link) {
-          link.addEventListener('click', function () {
-            nav.classList.remove('is-open');
-            toggle.setAttribute('aria-expanded', 'false');
-          });
+          link.addEventListener('click', function () { nav.classList.remove('is-open'); toggle.setAttribute('aria-expanded', 'false'); });
         });
       }
     });
   </script>
 
   <script>
-    // Scroll-reveal animation with IntersectionObserver
     (function() {
       var reveals = document.querySelectorAll('.reveal');
-      if (!('IntersectionObserver' in window)) {
-        reveals.forEach(function(el) { el.classList.add('is-visible'); });
-        return;
-      }
+      if (!('IntersectionObserver' in window)) { reveals.forEach(function(el) { el.classList.add('is-visible'); }); return; }
       var observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
-          }
-        });
+        entries.forEach(function(entry) { if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); } });
       }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
       reveals.forEach(function(el) { observer.observe(el); });
     })();
   </script>
 
-  <!-- HubSpot — loaded only after consent is granted -->
-  <script>
-    (function() {
-      function loadHubSpot() {
-        if (document.getElementById('hs-script-loader')) return;
-        var s = document.createElement('script');
-        s.type = 'text/javascript';
-        s.id = 'hs-script-loader';
-        s.async = true;
-        s.defer = true;
-        s.src = '//js-eu1.hs-scripts.com/148068634.js';
-        document.body.appendChild(s);
-      }
-
-      try {
-        if (localStorage.getItem('cookie_consent') === 'granted') {
-          loadHubSpot();
-        }
-      } catch (e) {}
-
-      var acceptBtn = document.getElementById('cookie-accept');
-      if (acceptBtn) {
-        acceptBtn.addEventListener('click', loadHubSpot);
-      }
-    })();
-  </script>
-
-  <!-- Supabase Auth -->
+  <!-- Supabase -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="/js/supabase-config.js"></script>
   <script src="/js/auth.js"></script>
-  <script>updateNavForAuth();</script>
+  <script>
+    updateNavForAuth();
+
+    // Redirect if already logged in
+    (async function() {
+      var session = await getSession();
+      if (session) {
+        var profile = await getProfile();
+        if (profile && profile.approval_status === 'approved') {
+          window.location.href = profile.role === 'admin' ? '/admin' : '/dashboard';
+        } else {
+          window.location.href = '/pending';
+        }
+      }
+    })();
+
+    document.getElementById('login-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      var btn = document.getElementById('login-btn');
+      var errorEl = document.getElementById('login-error');
+      errorEl.hidden = true;
+      btn.disabled = true;
+      btn.textContent = 'Signing in\u2026';
+
+      var email = document.getElementById('email').value.trim();
+      var password = document.getElementById('password').value;
+
+      if (!email || !password) {
+        errorEl.textContent = 'Please enter your email and password.';
+        errorEl.hidden = false;
+        btn.disabled = false;
+        btn.textContent = 'Sign In';
+        return;
+      }
+
+      var result = await loginUser(email, password);
+
+      if (result.error) {
+        errorEl.textContent = result.error.message;
+        errorEl.hidden = false;
+        btn.disabled = false;
+        btn.textContent = 'Sign In';
+        return;
+      }
+
+      // Check approval status and redirect
+      var profile = await getProfile();
+      if (profile && profile.approval_status === 'approved') {
+        window.location.href = profile.role === 'admin' ? '/admin' : '/dashboard';
+      } else {
+        window.location.href = '/pending';
+      }
+    });
+  </script>
 </body>
 </html>

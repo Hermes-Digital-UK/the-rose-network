@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin — The ROSE Network</title>
+  <meta name="description" content="ROSE Network administration panel.">
+  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0C1F2C">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', { 'ad_storage': 'denied', 'ad_user_data': 'denied', 'ad_personalization': 'denied', 'analytics_storage': 'denied', 'functionality_storage': 'denied', 'personalization_storage': 'denied', 'security_storage': 'granted', 'wait_for_update': 500 });
+    gtag('set', 'ads_data_redaction', true);
+    gtag('set', 'url_passthrough', true);
+    (function() { try { var c = localStorage.getItem('cookie_consent'); if (c === 'granted') { gtag('consent', 'update', { 'ad_storage': 'granted', 'ad_user_data': 'granted', 'ad_personalization': 'granted', 'analytics_storage': 'granted', 'functionality_storage': 'granted', 'personalization_storage': 'granted' }); } } catch (e) {} })();
+  </script>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WS8WK4Q9');</script>
+</head>
+<body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WS8WK4Q9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- ICA Affiliation Bar -->
+  <div class="ica-bar">
+    <div class="container">
+      <span class="ica-bar-label">Part of the <a href="https://www.roseandlaurel.uk/">Intelligence Corps Association</a></span>
+      <div class="ica-bar-links">
+        <a href="https://www.roseandlaurel.uk/">ICA Main Site</a>
+        <a href="https://www.roseandlaurel.uk/Members/Apply-for-Membership">ICA Membership</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Navigation -->
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="site-logo">
+        <img src="assets/rose-network-logo-horizontal.png" alt="The ROSE Network — Intelligence Corps Association" class="site-logo-img">
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/transition">Transition</a></li>
+          <li><a href="/professional-network">Network</a></li>
+          <li><a href="/enterprise">Enterprise</a></li>
+          <li><a href="/events">Events</a></li>
+          <li><a href="/insights">Insights</a></li>
+          <li><a href="/get-involved" class="nav-cta">Get Involved</a></li>
+          <li><a href="/contact" class="nav-cta">Contact</a></li>
+        </ul>
+        <ul class="nav-auth-links"></ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" style="padding-bottom: var(--space-lg);">
+    <div class="container">
+      <h1>Administration</h1>
+      <p class="hero-subtitle">Manage member registrations and approvals</p>
+    </div>
+  </section>
+
+  <!-- Admin Content -->
+  <section class="section section-about">
+    <div class="container">
+      <!-- Tab Navigation -->
+      <div class="admin-tabs">
+        <button class="admin-tab active" data-tab="pending">Pending Approval <span id="pending-count" class="admin-badge">0</span></button>
+        <button class="admin-tab" data-tab="all">All Members <span id="all-count" class="admin-badge">0</span></button>
+      </div>
+
+      <!-- Pending Tab -->
+      <div id="tab-pending" class="admin-tab-content active">
+        <div id="pending-empty" class="admin-empty reveal" hidden>
+          <p>No pending registrations.</p>
+        </div>
+        <div id="pending-list" class="admin-user-list"></div>
+      </div>
+
+      <!-- All Members Tab -->
+      <div id="tab-all" class="admin-tab-content">
+        <div id="all-list" class="admin-user-list"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="assets/rose-network-logo-portrait.png" alt="The ROSE Network" class="footer-logo" loading="lazy">
+          <p class="footer-brand">The ROSE Network</p>
+          <p class="footer-brand-sub">Intelligence Corps Association</p>
+          <p>An exclusive professional network for the Intelligence Corps community. Every member adds value. Every connection compounds.</p>
+        </div>
+        <div class="footer-col">
+          <h4>The Network</h4>
+          <ul>
+            <li><a href="/transition">Transition</a></li>
+            <li><a href="/professional-network">Professional Network</a></li>
+            <li><a href="/enterprise">Enterprise</a></li>
+            <li><a href="/events">Events</a></li>
+            <li><a href="/insights">Insights</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/get-involved">Get Involved</a></li>
+            <li><a href="/#governance">Governance</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li>Headquarters ICA</li>
+            <li>Mrs Hazel Donald</li>
+            <li><a href="mailto:ica_hq@roseandlaurel.uk">ica_hq@roseandlaurel.uk</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="https://www.roseandlaurel.uk/" target="_blank" rel="noopener">Intelligence Corps Association</a></li>
+            <li><a href="https://www.veteransgateway.org.uk/" target="_blank" rel="noopener">Veterans Gateway</a></li>
+            <li><a href="https://www.ssafa.org.uk/" target="_blank" rel="noopener">SSAFA</a></li>
+            <li><a href="https://www.britishlegion.org.uk/" target="_blank" rel="noopener">Royal British Legion</a></li>
+            <li><a href="https://www.cobseo.org.uk/" target="_blank" rel="noopener">COBSEO</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; Intelligence Corps Association. All rights reserved.</p>
+        <p class="footer-charity">Registered Charity No. 1175211</p>
+        <p class="footer-legal"><a href="/privacy-policy">Privacy Policy</a> &middot; <a href="/cookie-policy">Cookie Policy</a> &middot; <a href="/terms-of-use">Terms of Use</a> &middot; <button id="cookie-settings" class="cookie-settings-link" type="button">Cookie Settings</button></p>
+        <p class="footer-credit"><a href="/brand-guidelines">Brand Guidelines</a> &middot; Website by <a href="https://hermesdigital.co.uk/" target="_blank" rel="noopener">Hermes Digital</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Cookie consent" aria-hidden="true">
+    <div class="cookie-banner-inner">
+      <p class="cookie-banner-text">We use cookies to analyse site usage and improve your experience. By accepting, you consent to our use of cookies in accordance with our <a href="/privacy-policy">Privacy Policy</a>.</p>
+      <div class="cookie-banner-actions">
+        <button id="cookie-reject" class="cookie-btn cookie-btn--reject" type="button">Reject</button>
+        <button id="cookie-accept" class="cookie-btn cookie-btn--accept" type="button">Accept</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      var banner = document.getElementById('cookie-banner'); var consent = null;
+      try { consent = localStorage.getItem('cookie_consent'); } catch (e) {}
+      if (consent === null) { banner.setAttribute('aria-hidden', 'false'); banner.classList.add('is-visible'); }
+      document.getElementById('cookie-accept').addEventListener('click', function() { gtag('consent', 'update', { 'ad_storage': 'granted', 'ad_user_data': 'granted', 'ad_personalization': 'granted', 'analytics_storage': 'granted', 'functionality_storage': 'granted', 'personalization_storage': 'granted' }); try { localStorage.setItem('cookie_consent', 'granted'); } catch (e) {} banner.classList.remove('is-visible'); banner.setAttribute('aria-hidden', 'true'); });
+      var settingsBtn = document.getElementById('cookie-settings');
+      if (settingsBtn) { settingsBtn.addEventListener('click', function() { banner.setAttribute('aria-hidden', 'false'); banner.classList.add('is-visible'); }); }
+      document.getElementById('cookie-reject').addEventListener('click', function() { gtag('consent', 'update', { 'ad_storage': 'denied', 'ad_user_data': 'denied', 'ad_personalization': 'denied', 'analytics_storage': 'denied', 'functionality_storage': 'denied', 'personalization_storage': 'denied' }); try { localStorage.setItem('cookie_consent', 'denied'); } catch (e) {} banner.classList.remove('is-visible'); banner.setAttribute('aria-hidden', 'true'); });
+    })();
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var toggle = document.querySelector('.nav-toggle'); var nav = document.querySelector('.site-nav');
+      if (toggle && nav) {
+        toggle.addEventListener('click', function () { var expanded = toggle.getAttribute('aria-expanded') === 'true'; toggle.setAttribute('aria-expanded', String(!expanded)); nav.classList.toggle('is-open'); });
+        nav.querySelectorAll('a').forEach(function (link) { link.addEventListener('click', function () { nav.classList.remove('is-open'); toggle.setAttribute('aria-expanded', 'false'); }); });
+      }
+    });
+  </script>
+
+  <!-- Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="/js/supabase-config.js"></script>
+  <script src="/js/auth.js"></script>
+  <script>
+    // Tab switching
+    document.querySelectorAll('.admin-tab').forEach(function(tab) {
+      tab.addEventListener('click', function() {
+        document.querySelectorAll('.admin-tab').forEach(function(t) { t.classList.remove('active'); });
+        document.querySelectorAll('.admin-tab-content').forEach(function(c) { c.classList.remove('active'); });
+        tab.classList.add('active');
+        document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
+      });
+    });
+
+    function renderUserCard(user, showActions) {
+      var date = new Date(user.created_at).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+      var statusClass = 'status--' + user.approval_status;
+
+      var html = '<div class="admin-user-card" data-user-id="' + user.id + '">' +
+        '<div class="admin-user-info">' +
+          '<h3>' + user.full_name + '</h3>' +
+          '<div class="admin-user-meta">' +
+            '<span class="admin-user-role">' + formatRole(user.role) + '</span>' +
+            '<span class="admin-user-status ' + statusClass + '">' + formatStatus(user.approval_status) + '</span>' +
+            '<span class="admin-user-date">' + date + '</span>' +
+          '</div>' +
+        '</div>';
+
+      if (showActions && user.approval_status === 'pending') {
+        html += '<div class="admin-user-actions">' +
+          '<button class="btn btn-primary btn--sm admin-approve" data-id="' + user.id + '">Approve</button>' +
+          '<button class="btn btn-secondary btn--sm admin-reject" data-id="' + user.id + '">Reject</button>' +
+        '</div>';
+      }
+
+      html += '</div>';
+      return html;
+    }
+
+    async function loadData() {
+      var pending = await getPendingUsers();
+      var all = await getAllUsers();
+
+      document.getElementById('pending-count').textContent = pending.length;
+      document.getElementById('all-count').textContent = all.length;
+
+      var pendingList = document.getElementById('pending-list');
+      var pendingEmpty = document.getElementById('pending-empty');
+
+      if (pending.length === 0) {
+        pendingEmpty.hidden = false;
+        pendingList.innerHTML = '';
+      } else {
+        pendingEmpty.hidden = true;
+        pendingList.innerHTML = pending.map(function(u) { return renderUserCard(u, true); }).join('');
+      }
+
+      var allList = document.getElementById('all-list');
+      allList.innerHTML = all.map(function(u) { return renderUserCard(u, false); }).join('');
+
+      // Attach action handlers
+      document.querySelectorAll('.admin-approve').forEach(function(btn) {
+        btn.addEventListener('click', async function() {
+          btn.disabled = true;
+          btn.textContent = 'Approving\u2026';
+          await approveUser(btn.dataset.id);
+          await loadData();
+        });
+      });
+
+      document.querySelectorAll('.admin-reject').forEach(function(btn) {
+        btn.addEventListener('click', async function() {
+          if (!confirm('Are you sure you want to reject this registration?')) return;
+          btn.disabled = true;
+          btn.textContent = 'Rejecting\u2026';
+          await rejectUser(btn.dataset.id);
+          await loadData();
+        });
+      });
+    }
+
+    (async function() {
+      var profile = await requireAdmin();
+      if (!profile) return;
+
+      updateNavForAuth();
+      await loadData();
+    })();
+  </script>
+</body>
+</html>

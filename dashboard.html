@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — The ROSE Network</title>
+  <meta name="description" content="Your ROSE Network member dashboard.">
+  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0C1F2C">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', { 'ad_storage': 'denied', 'ad_user_data': 'denied', 'ad_personalization': 'denied', 'analytics_storage': 'denied', 'functionality_storage': 'denied', 'personalization_storage': 'denied', 'security_storage': 'granted', 'wait_for_update': 500 });
+    gtag('set', 'ads_data_redaction', true);
+    gtag('set', 'url_passthrough', true);
+    (function() { try { var c = localStorage.getItem('cookie_consent'); if (c === 'granted') { gtag('consent', 'update', { 'ad_storage': 'granted', 'ad_user_data': 'granted', 'ad_personalization': 'granted', 'analytics_storage': 'granted', 'functionality_storage': 'granted', 'personalization_storage': 'granted' }); } } catch (e) {} })();
+  </script>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WS8WK4Q9');</script>
+</head>
+<body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WS8WK4Q9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- ICA Affiliation Bar -->
+  <div class="ica-bar">
+    <div class="container">
+      <span class="ica-bar-label">Part of the <a href="https://www.roseandlaurel.uk/">Intelligence Corps Association</a></span>
+      <div class="ica-bar-links">
+        <a href="https://www.roseandlaurel.uk/">ICA Main Site</a>
+        <a href="https://www.roseandlaurel.uk/Members/Apply-for-Membership">ICA Membership</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Navigation -->
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="site-logo">
+        <img src="assets/rose-network-logo-horizontal.png" alt="The ROSE Network — Intelligence Corps Association" class="site-logo-img">
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/transition">Transition</a></li>
+          <li><a href="/professional-network">Network</a></li>
+          <li><a href="/enterprise">Enterprise</a></li>
+          <li><a href="/events">Events</a></li>
+          <li><a href="/insights">Insights</a></li>
+          <li><a href="/get-involved" class="nav-cta">Get Involved</a></li>
+          <li><a href="/contact" class="nav-cta">Contact</a></li>
+        </ul>
+        <ul class="nav-auth-links"></ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" style="padding-bottom: var(--space-lg);">
+    <div class="container">
+      <h1>Member Dashboard</h1>
+      <p class="hero-subtitle" id="dash-welcome">Welcome back</p>
+    </div>
+  </section>
+
+  <!-- Dashboard Content -->
+  <section class="section section-about">
+    <div class="container">
+      <div class="dash-grid">
+        <!-- Profile Card -->
+        <div class="dash-card reveal">
+          <h2>Your Profile</h2>
+          <div class="dash-profile">
+            <div class="dash-profile-row">
+              <span class="dash-label">Name</span>
+              <span id="dash-name" class="dash-value">—</span>
+            </div>
+            <div class="dash-profile-row">
+              <span class="dash-label">Email</span>
+              <span id="dash-email" class="dash-value">—</span>
+            </div>
+            <div class="dash-profile-row">
+              <span class="dash-label">Role</span>
+              <span id="dash-role" class="dash-value">—</span>
+            </div>
+            <div class="dash-profile-row">
+              <span class="dash-label">Status</span>
+              <span id="dash-status" class="dash-value">—</span>
+            </div>
+            <div class="dash-profile-row">
+              <span class="dash-label">Member Since</span>
+              <span id="dash-since" class="dash-value">—</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Links Card -->
+        <div class="dash-card reveal reveal-delay-1">
+          <h2>Quick Links</h2>
+          <ul class="dash-links">
+            <li><a href="/transition">Transition Support</a></li>
+            <li><a href="/professional-network">Professional Network</a></li>
+            <li><a href="/enterprise">Enterprise</a></li>
+            <li><a href="/events">Upcoming Events</a></li>
+            <li><a href="/insights">Latest Insights</a></li>
+            <li><a href="/contact">Contact the Network</a></li>
+          </ul>
+        </div>
+
+        <!-- Info Card -->
+        <div class="dash-card dash-card--full reveal reveal-delay-2">
+          <h2>Your Member Area</h2>
+          <p>Welcome to the ROSE Network member area. This space will grow as the network develops, providing you with tools and resources tailored to your role within the Intelligence Corps community.</p>
+          <p style="margin-top: var(--space-sm); color: var(--color-text-muted);">More features are being developed. If you have suggestions for what you'd like to see here, please <a href="/contact">let us know</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="assets/rose-network-logo-portrait.png" alt="The ROSE Network" class="footer-logo" loading="lazy">
+          <p class="footer-brand">The ROSE Network</p>
+          <p class="footer-brand-sub">Intelligence Corps Association</p>
+          <p>An exclusive professional network for the Intelligence Corps community. Every member adds value. Every connection compounds.</p>
+        </div>
+        <div class="footer-col">
+          <h4>The Network</h4>
+          <ul>
+            <li><a href="/transition">Transition</a></li>
+            <li><a href="/professional-network">Professional Network</a></li>
+            <li><a href="/enterprise">Enterprise</a></li>
+            <li><a href="/events">Events</a></li>
+            <li><a href="/insights">Insights</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/get-involved">Get Involved</a></li>
+            <li><a href="/#governance">Governance</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li>Headquarters ICA</li>
+            <li>Mrs Hazel Donald</li>
+            <li><a href="mailto:ica_hq@roseandlaurel.uk">ica_hq@roseandlaurel.uk</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="https://www.roseandlaurel.uk/" target="_blank" rel="noopener">Intelligence Corps Association</a></li>
+            <li><a href="https://www.veteransgateway.org.uk/" target="_blank" rel="noopener">Veterans Gateway</a></li>
+            <li><a href="https://www.ssafa.org.uk/" target="_blank" rel="noopener">SSAFA</a></li>
+            <li><a href="https://www.britishlegion.org.uk/" target="_blank" rel="noopener">Royal British Legion</a></li>
+            <li><a href="https://www.cobseo.org.uk/" target="_blank" rel="noopener">COBSEO</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; Intelligence Corps Association. All rights reserved.</p>
+        <p class="footer-charity">Registered Charity No. 1175211</p>
+        <p class="footer-legal"><a href="/privacy-policy">Privacy Policy</a> &middot; <a href="/cookie-policy">Cookie Policy</a> &middot; <a href="/terms-of-use">Terms of Use</a> &middot; <button id="cookie-settings" class="cookie-settings-link" type="button">Cookie Settings</button></p>
+        <p class="footer-credit"><a href="/brand-guidelines">Brand Guidelines</a> &middot; Website by <a href="https://hermesdigital.co.uk/" target="_blank" rel="noopener">Hermes Digital</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Cookie consent" aria-hidden="true">
+    <div class="cookie-banner-inner">
+      <p class="cookie-banner-text">We use cookies to analyse site usage and improve your experience. By accepting, you consent to our use of cookies in accordance with our <a href="/privacy-policy">Privacy Policy</a>.</p>
+      <div class="cookie-banner-actions">
+        <button id="cookie-reject" class="cookie-btn cookie-btn--reject" type="button">Reject</button>
+        <button id="cookie-accept" class="cookie-btn cookie-btn--accept" type="button">Accept</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      var banner = document.getElementById('cookie-banner'); var consent = null;
+      try { consent = localStorage.getItem('cookie_consent'); } catch (e) {}
+      if (consent === null) { banner.setAttribute('aria-hidden', 'false'); banner.classList.add('is-visible'); }
+      document.getElementById('cookie-accept').addEventListener('click', function() { gtag('consent', 'update', { 'ad_storage': 'granted', 'ad_user_data': 'granted', 'ad_personalization': 'granted', 'analytics_storage': 'granted', 'functionality_storage': 'granted', 'personalization_storage': 'granted' }); try { localStorage.setItem('cookie_consent', 'granted'); } catch (e) {} banner.classList.remove('is-visible'); banner.setAttribute('aria-hidden', 'true'); });
+      var settingsBtn = document.getElementById('cookie-settings');
+      if (settingsBtn) { settingsBtn.addEventListener('click', function() { banner.setAttribute('aria-hidden', 'false'); banner.classList.add('is-visible'); }); }
+      document.getElementById('cookie-reject').addEventListener('click', function() { gtag('consent', 'update', { 'ad_storage': 'denied', 'ad_user_data': 'denied', 'ad_personalization': 'denied', 'analytics_storage': 'denied', 'functionality_storage': 'denied', 'personalization_storage': 'denied' }); try { localStorage.setItem('cookie_consent', 'denied'); } catch (e) {} banner.classList.remove('is-visible'); banner.setAttribute('aria-hidden', 'true'); });
+    })();
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var toggle = document.querySelector('.nav-toggle'); var nav = document.querySelector('.site-nav');
+      if (toggle && nav) {
+        toggle.addEventListener('click', function () { var expanded = toggle.getAttribute('aria-expanded') === 'true'; toggle.setAttribute('aria-expanded', String(!expanded)); nav.classList.toggle('is-open'); });
+        nav.querySelectorAll('a').forEach(function (link) { link.addEventListener('click', function () { nav.classList.remove('is-open'); toggle.setAttribute('aria-expanded', 'false'); }); });
+      }
+    });
+  </script>
+
+  <script>
+    (function() {
+      var reveals = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) { reveals.forEach(function(el) { el.classList.add('is-visible'); }); return; }
+      var observer = new IntersectionObserver(function(entries) { entries.forEach(function(entry) { if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); } }); }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      reveals.forEach(function(el) { observer.observe(el); });
+    })();
+  </script>
+
+  <!-- Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="/js/supabase-config.js"></script>
+  <script src="/js/auth.js"></script>
+  <script>
+    (async function() {
+      var profile = await requireApproval();
+      if (!profile) return;
+
+      updateNavForAuth();
+
+      // Populate dashboard
+      var session = await getSession();
+      document.getElementById('dash-welcome').textContent = 'Welcome back, ' + profile.full_name;
+      document.getElementById('dash-name').textContent = profile.full_name;
+      document.getElementById('dash-email').textContent = session.user.email;
+      document.getElementById('dash-role').textContent = formatRole(profile.role);
+      document.getElementById('dash-status').textContent = formatStatus(profile.approval_status);
+      document.getElementById('dash-since').textContent = new Date(profile.created_at).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+    })();
+  </script>
+</body>
+</html>
