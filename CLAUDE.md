@@ -81,6 +81,7 @@ Mrs Hazel Donald — Headquarters Intelligence Corps Association
 ## Deployment
 - `vercel.json` enables `cleanUrls` (`.html` extensions stripped)
 - Pushes to `main` auto-deploy to Vercel
+- **Staging URL:** staging.therosenetwork.co.uk
 
 ## Constraints
 - No client/member data in personal or shared environments

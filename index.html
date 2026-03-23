@@ -155,14 +155,16 @@
       <nav class="site-nav" aria-label="Primary navigation">
         <ul>
           <li><a href="/" class="active">Home</a></li>
+          <li><a href="/about">About</a></li>
           <li><a href="/transition">Transition</a></li>
           <li><a href="/professional-network">Network</a></li>
           <li><a href="/enterprise">Enterprise</a></li>
           <li><a href="/events">Events</a></li>
           <li><a href="/insights">Insights</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li><a href="/get-involved" class="nav-cta">Get Involved</a></li>
+          <li><a href="/contact" class="nav-cta">Contact</a></li>
         </ul>
+        <ul class="nav-auth-links"></ul>
       </nav>
     </div>
   </header>
@@ -176,7 +178,7 @@
       <p class="hero-description">Every member adds value. Every connection compounds. From transition through career building to enterprise — this network grows with you.</p>
       <div class="hero-actions">
         <a href="#pillars" class="btn btn-primary">Explore the Network</a>
-        <a href="#involve" class="btn btn-secondary">Get Involved</a>
+        <a href="/get-involved" class="btn btn-secondary">Get Involved</a>
       </div>
     </div>
   </section>
@@ -716,5 +718,10 @@
     })();
   </script>
 
+  <!-- Supabase Auth -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="/js/supabase-config.js"></script>
+  <script src="/js/auth.js"></script>
+  <script>updateNavForAuth();</script>
 </body>
 </html>
