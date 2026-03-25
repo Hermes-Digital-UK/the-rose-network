@@ -2244,6 +2244,8 @@ h2 {
   transition: all var(--transition);
   display: flex;
   flex-direction: column;
+  text-decoration: none;
+  color: inherit;
 }
 
 .insight-card:hover {
@@ -2339,6 +2341,12 @@ h2 {
 .insight-date {
   font-size: 0.78rem;
   color: var(--color-text-light);
+}
+
+.insight-author {
+  font-size: 0.78rem;
+  color: var(--color-text-light);
+  margin-left: auto;
 }
 
 .insight-card-body h3 {
